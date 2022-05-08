@@ -119,7 +119,7 @@ You can ask for tokens in the #faucet Discord channel.
 
 ## Сheck your balance:
 ```
-stafihubd q bank balances <stafi...your..wallet...>
+stafihubd q bank balances <your stafihub wallet...>
 ```
 
 ## Create validator:
