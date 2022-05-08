@@ -54,7 +54,7 @@ echo $CHAIN_ID ; \
 echo 'export CHAIN_ID='\"${CHAIN_ID}\" >> $HOME/.bash_profile
 ```
 
-## Generate keys
+## Generate keys:
 ```
 stafihubd keys add $YOUR_TEST_WALLET
 ```
@@ -69,7 +69,7 @@ stafihub init $NODE_MONIKER --chain-id $CHAIN_ID --recover
 wget -O $HOME/.stafihub/config/genesis.json "https://raw.githubusercontent.com/stafihub/network/main/testnets/stafihub-public-testnet-2/genesis.json"
 ```
 
-## Unsafe restart all
+## Unsafe restart all:
 ```
 stafihubd tendermint unsafe-reset-all --home ~/.stafihub
 ```
@@ -110,7 +110,7 @@ sudo systemctl restart stafihubd
 journalctl -u stafihubd -f
 ```
 
-## Status of sinchronization
+## Status of sinchronization:
 ```
 stafihubd status 2>&1 | jq .SyncInfo
 ```
@@ -120,12 +120,12 @@ stafihubd status 2>&1 | jq .SyncInfo
 You can ask for tokens in the #faucet Discord channel.
 !faucet send YOUR_WALLET_ADDRESS
 
-## Сheck your balance
+## Сheck your balance:
 ```
 stafihubd q bank balances <stafi...your..wallet...>
 ```
 
-## Create validator
+## Create validator:
 ```
 stafihubd tx staking create-validator \
 --amount=1000000ufis \
