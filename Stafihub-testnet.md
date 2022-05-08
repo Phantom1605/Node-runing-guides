@@ -116,12 +116,12 @@ stafihubd status 2>&1 | jq .SyncInfo
 
 
 ## Faucet:
-You can ask for tokens in the #faucet Discord channel.
-!faucet send YOUR_WALLET_ADDRESS
+You can ask for tokens in the [#faucet](https://discord.gg/uKSdyZ8z) Discord channel.
+Send: `!faucet send <YOUR_WALLET_ADDRESS>`
 
 ## Сheck your balance:
 ```
-stafihubd q bank balances <your stafihub wallet...>
+stafihubd q bank balances $(stafihubd keys show $YOUR_TEST_WALLET -a)
 ```
 
 ## Create validator:
@@ -168,6 +168,9 @@ sudo systemctl stop stafihubd
 
 ## Delete node files and directories:
 ```
+sudo systemctl stop stafihubd
+sudo systemctl disable stafihubd
+rm /etc/systemd/system/stafihubd.service
 rm -Rvf $HOME/stafihub
 rm -Rvf $HOME/.stafihub
 ```
