@@ -37,13 +37,15 @@ cp $HOME/go/bin/stafihubd /usr/local/bin
 ## Add variobles.
 - Add moniker instead of <Your_Moniker>
 - Add wallet name instead of <Your_Wallet_Name>
+- Add chein id
 ```
 NODE_MONIKER=<Your_Moniker>
 YOUR_TEST_WALLET=<Your_Wallet_Name>
+CHAIN_ID=stafihub-public-testnet-2
 
-echo 'export NODE_MONIKER='\"${NODE_MONIKER}\" >> $HOME/.bash_profile
-echo 'export YOUR_TEST_WALLET='\"${YOUR_TEST_WALLET}\" >> $HOME/.bash_profile
-echo 'export CHAIN_ID=stafihub-public-testnet-2 >> $HOME/.bash_profile
+echo 'export $NODE_MONIKER='\"${NODE_MONIKER}\" >> $HOME/.bash_profile
+echo 'export $YOUR_TEST_WALLET='\"${YOUR_TEST_WALLET}\" >> $HOME/.bash_profile
+echo 'export $CHAIN_ID=stafihub-public-testnet-2 >> $HOME/.bash_profile
 . $HOME/.bash_profile
 
 # let's check
