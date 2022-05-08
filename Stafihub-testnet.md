@@ -143,7 +143,7 @@ stafihubd tx staking create-validator \
  --gas-prices=0.025ufis
  ```
 
-# Delegating tokens to your validator:
+# Delegate tokens to your validator:
 ```
 stafihubd tx staking delegate $(stafihubd keys show $YOUR_TEST_WALLET --bech val -a) <amountufis> \
 --chain-id=$CHAIN_ID \
@@ -152,7 +152,7 @@ stafihubd tx staking delegate $(stafihubd keys show $YOUR_TEST_WALLET --bech val
 --fees=200ufis
 ```
 
-# Collecting rewards:
+# Collect rewards:
 ```
 stafihubd tx distribution withdraw-all-rewards --from $YOUR_TEST_WALLET --fees=300ufis --chain-id $CHAIN_ID
 ```
@@ -167,7 +167,7 @@ stafihubd tx slashing unjail --chain-id $CHAIN_ID --from $YOUR_TEST_WALLET --gas
 sudo systemctl stop stafihubd
 ```
 
-# Deleting node files and directories:
+# Delete node files and directories:
 ```
 rm -Rvf $HOME/stafihub
 rm -Rvf $HOME/.stafihub
