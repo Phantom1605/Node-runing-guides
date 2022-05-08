@@ -23,13 +23,14 @@ go version
 
 ## Clone git repository:
 ```
-git clone --branch public-testnet-v2 https://github.com/stafihub/stafihub
+cd $HOME && git clone --branch public-testnet-v2 https://github.com/stafihub/stafihub
 ```
 
 
 ## Install:
 ```
 cd $HOME/stafihub && make install
+cp $HOME/go/bin/stafihubd /usr/local/bin
 ```
 
 ## Add your moniker instead of <Your_Moniker>. Enter by one command.
