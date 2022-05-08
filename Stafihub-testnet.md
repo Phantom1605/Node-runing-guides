@@ -60,7 +60,7 @@ stafihubd keys add $YOUR_TEST_WALLET
 
 ## Init:
 ```
-stafihub init $NODE_MONIKER --chain-id $CHAIN_ID --recover
+stafihubd init $NODE_MONIKER --chain-id $CHAIN_ID --recover
 ```
 
 ## Download genesis:
