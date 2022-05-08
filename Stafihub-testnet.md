@@ -1,11 +1,11 @@
-# Install dependencies:
+## Install dependencies:
 
 ```
 cd $HOME
 sudo apt update && sudo apt upgrade -y
 sudo apt install make clang pkg-config libssl-dev build-essential git jq ncdu bsdmainutils -y < "/dev/null"
 ```
-# Install Go:
+## Install Go:
 ```
 cd $HOME
 wget -O go1.17.3.linux-amd64.tar.gz https://go.dev/dl/go1.17.3.linux-amd64.tar.gz
@@ -22,18 +22,18 @@ cp /usr/local/go/bin/go /usr/bin
 go version
 ```
 
-# Clone git repository:
+## Clone git repository:
 ```
 git clone --branch public-testnet-v2 https://github.com/stafihub/stafihub
 ```
 
 
-# Install:
+## Install:
 ```
 cd $HOME/stafihub && make install
 ```
 
-# Add your moniker instead of <Your_Moniker>. Enter by one command.
+## Add your moniker instead of <Your_Moniker>. Enter by one command.
 ```
 NODE_MONIKER=<Your_Moniker> ; \
 echo $NODE_MONIKER ; \
@@ -41,40 +41,40 @@ echo 'export NODE_MONIKER='\"${NODE_MONIKER}\" >> $HOME/.bash_profile
 ```
 
 
-# Add your wallet name instead of <Your_Wallet_Name>. Enter by one command.
+## Add your wallet name instead of <Your_Wallet_Name>. Enter by one command.
 ```
 YOUR_TEST_WALLET=<Your_Wallet_Name> ; \
 echo $YOUR_TEST_WALLET ; \
 echo 'export YOUR_TEST_WALLET='\"${YOUR_TEST_WALLET}\" >> $HOME/.bash_profile
 ```
-# Add CHAIN_ID. Enter by one command.
+## Add CHAIN_ID. Enter by one command.
 ```
 CHAIN_ID=stafihub-public-testnet-2 ; \
 echo $CHAIN_ID ; \
 echo 'export CHAIN_ID='\"${CHAIN_ID}\" >> $HOME/.bash_profile
 ```
 
-# Generate keys
+## Generate keys
 ```
 stafihubd keys add $YOUR_TEST_WALLET
 ```
 
-# Init:
+## Init:
 ```
 stafihub init $NODE_MONIKER --chain-id $CHAIN_ID --recover
 ```
 
-# Download genesis:
+## Download genesis:
 ```
 wget -O $HOME/.stafihub/config/genesis.json "https://raw.githubusercontent.com/stafihub/network/main/testnets/stafihub-public-testnet-2/genesis.json"
 ```
 
-# Unsafe restart all
+## Unsafe restart all
 ```
 stafihubd tendermint unsafe-reset-all --home ~/.stafihub
 ```
 
-# Configure your node:
+## Configure your node:
 ```
 sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.01ufis\"/" $HOME/.stafihub/config/app.toml
 sed -i '/\[grpc\]/{:a;n;/enabled/s/false/true/;Ta};/\[api\]/{:a;n;/enable/s/false/true/;Ta;}' $HOME/.stafihub/config/app.toml
@@ -82,7 +82,7 @@ peers="4e2441c0a4663141bb6b2d0ea4bc3284171994b6@46.38.241.169:26656,79ffbd983ab6
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.stafihub/config/config.toml
 ```
 
- # Install service to run the node:
+ ## Install service to run the node:
  ```
 sudo tee <<EOF >/dev/null /etc/systemd/system/stafihubd.service
 [Unit]
@@ -105,27 +105,27 @@ sudo systemctl daemon-reload
 sudo systemctl enable stafihubd
 sudo systemctl restart stafihubd
 ```
-# Check your node logs:
+## Check your node logs:
 ```
 journalctl -u stafihubd -f
 ```
 
-# Status of sinchronization
+## Status of sinchronization
 ```
 stafihubd status 2>&1 | jq .SyncInfo
 ```
 
 
-# Faucet:
+## Faucet:
 You can ask for tokens in the #faucet Discord channel.
 !faucet send YOUR_WALLET_ADDRESS
 
-# Balans:
+## Сheck your balance
 ```
 stafihubd q bank balances <stafi...your..wallet...>
 ```
 
-# Create validator
+## Create validator
 ```
 stafihubd tx staking create-validator \
 --amount=1000000ufis \
@@ -143,7 +143,7 @@ stafihubd tx staking create-validator \
  --gas-prices=0.025ufis
  ```
 
-# Delegate tokens to your validator:
+## Delegate tokens to your validator:
 ```
 stafihubd tx staking delegate $(stafihubd keys show $YOUR_TEST_WALLET --bech val -a) <amountufis> \
 --chain-id=$CHAIN_ID \
@@ -152,22 +152,22 @@ stafihubd tx staking delegate $(stafihubd keys show $YOUR_TEST_WALLET --bech val
 --fees=200ufis
 ```
 
-# Collect rewards:
+## Collect rewards:
 ```
 stafihubd tx distribution withdraw-all-rewards --from $YOUR_TEST_WALLET --fees=300ufis --chain-id $CHAIN_ID
 ```
 
-# Unjail:
+## Unjail:
 ```
 stafihubd tx slashing unjail --chain-id $CHAIN_ID --from $YOUR_TEST_WALLET --gas=auto --fees=1000ufis
 ```
 
-# Stop the node:
+## Stop the node:
 ```
 sudo systemctl stop stafihubd
 ```
 
-# Delete node files and directories:
+## Delete node files and directories:
 ```
 rm -Rvf $HOME/stafihub
 rm -Rvf $HOME/.stafihub
