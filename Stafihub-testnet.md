@@ -127,7 +127,7 @@ stafihubd q bank balances <your stafihub wallet...>
 ## Create validator:
 ```
 stafihubd tx staking create-validator \
---amount=1000000ufis \
+ --amount=1000000ufis \
  --pubkey=$(stafihubd tendermint show-validator) /
  --from=$YOUR_TEST_WALLET \
  --moniker=$NODE_MONIKER \
