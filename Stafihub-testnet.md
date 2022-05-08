@@ -9,6 +9,7 @@ sudo apt install make clang pkg-config libssl-dev build-essential git jq ncdu bs
 cd $HOME
 wget -O go1.17.3.linux-amd64.tar.gz https://golang.org/dl/go1.17.3.linux-amd64.tar.gz
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.3.linux-amd64.tar.gz && rm go1.17.3.linux-amd64.tar.gz
+
 cat <<'EOF' >> $HOME/.bash_profile
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
@@ -33,27 +34,23 @@ cd $HOME/stafihub && make install
 cp $HOME/go/bin/stafihubd /usr/local/bin
 ```
 
-## Add your moniker instead of <Your_Moniker>. Enter by one command.
+## Add variobles.
+- Add moniker instead of <Your_Moniker>
+- Add wallet name instead of <Your_Wallet_Name>
 ```
-NODE_MONIKER=<Your_Moniker> ; \
-echo $NODE_MONIKER ; \
+NODE_MONIKER=<Your_Moniker>
+YOUR_TEST_WALLET=<Your_Wallet_Name>
+
 echo 'export NODE_MONIKER='\"${NODE_MONIKER}\" >> $HOME/.bash_profile
-```
-
-
-## Add your wallet name instead of <Your_Wallet_Name>. Enter by one command.
-```
-YOUR_TEST_WALLET=<Your_Wallet_Name> ; \
-echo $YOUR_TEST_WALLET ; \
 echo 'export YOUR_TEST_WALLET='\"${YOUR_TEST_WALLET}\" >> $HOME/.bash_profile
-```
-## Add CHAIN_ID. Enter by one command.
-```
-CHAIN_ID=stafihub-public-testnet-2 ; \
-echo $CHAIN_ID ; \
-echo 'export CHAIN_ID='\"${CHAIN_ID}\" >> $HOME/.bash_profile
-```
+echo 'export CHAIN_ID=stafihub-public-testnet-2 >> $HOME/.bash_profile
+. $HOME/.bash_profile
 
+# let's check
+echo $NODE_MONIKER
+echo $YOUR_TEST_WALLET
+echo $CHAIN_ID
+```
 ## Generate keys:
 ```
 stafihubd keys add $YOUR_TEST_WALLET
