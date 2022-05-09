@@ -150,7 +150,7 @@ stafihubd tx staking create-validator \
  
  ## Delegate tokens to your validator:
 ```
-stafihubd tx staking delegate $(stafihubd keys show $YOUR_TEST_WALLET --bech val -a) 2000000ufis \
+stafihubd tx staking delegate $(stafihubd keys show $YOUR_TEST_WALLET --bech val -a) <amountufis> \
 --chain-id=$CHAIN_ID \
 --from=$YOUR_TEST_WALLET \
 --gas auto \
