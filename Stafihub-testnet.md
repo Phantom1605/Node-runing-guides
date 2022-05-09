@@ -141,24 +141,40 @@ stafihubd tx staking create-validator \
  --min-self-delegation=1 \
  --gas-prices=0.025ufis
  ```
-
-## Delegate tokens to your validator:
+ 
+ 
+ ## explorer of the stafihab testnet:
+ https://testnet-explorer.stafihub.io/stafi-hub-testnet/staking
+ 
+ 
+ 
+ ## Delegate tokens to your validator:
 ```
-stafihubd tx staking delegate $(stafihubd keys show $YOUR_TEST_WALLET --bech val -a) <amountufis> \
+stafihubd tx staking delegate $(stafihubd keys show $YOUR_TEST_WALLET --bech val -a) 2000000ufis \
 --chain-id=$CHAIN_ID \
 --from=$YOUR_TEST_WALLET \
 --gas auto \
---fees=200ufis
+--gas-adjustment=1.4 \
+--gas-prices=0.025ufis
 ```
 
 ## Collect rewards:
 ```
-stafihubd tx distribution withdraw-all-rewards --from $YOUR_TEST_WALLET --fees=300ufis --chain-id $CHAIN_ID
+stafihubd tx distribution withdraw-all-rewards \
+ --chain-id=$CHAIN_ID \
+ --from $YOUR_TEST_WALLET \
+ --gas auto \
+ --gas-adjustment=1.4 \
+ --gas-prices="0.025ufis" \
 ```
 
 ## Unjail:
 ```
-stafihubd tx slashing unjail --chain-id $CHAIN_ID --from $YOUR_TEST_WALLET --gas=auto --fees=1000ufis
+stafihubd tx slashing unjail \
+--chain-id $CHAIN_ID 
+--from $YOUR_TEST_WALLET 
+--gas=auto 
+--gas-adjustment=1.4 \
 ```
 
 ## Stop the node:
