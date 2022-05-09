@@ -175,6 +175,7 @@ stafihubd tx slashing unjail \
 --from $YOUR_TEST_WALLET 
 --gas=auto 
 --gas-adjustment=1.4 \
+--gas-prices="0.025ufis"
 ```
 
 ## Stop the node:
