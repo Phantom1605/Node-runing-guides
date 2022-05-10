@@ -142,6 +142,11 @@ stafihubd tx staking create-validator \
  --gas-prices=0.025ufis
  ```
  
+ ## Check your node status:
+ ```
+ curl localhost:26657/status
+ ```
+ 
  
  ## explorer of the stafihab testnet:
  https://testnet-explorer.stafihub.io/stafi-hub-testnet/staking
