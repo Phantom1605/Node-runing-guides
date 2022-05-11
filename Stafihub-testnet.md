@@ -170,7 +170,7 @@ stafihubd tx distribution withdraw-all-rewards \
  --from $YOUR_TEST_WALLET \
  --gas auto \
  --gas-adjustment=1.4 \
- --gas-prices="0.025ufis" \
+ --gas-prices="0.025ufis"
 ```
 
 ## Unjail:
