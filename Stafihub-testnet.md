@@ -25,7 +25,6 @@ go version
 ## Clone git repository:
 ```
 cd $HOME && git clone --branch public-testnet-v2 https://github.com/stafihub/stafihub
-cp $HOME/go/bin/stafihubd /usr/local/bin
 ```
 
 
