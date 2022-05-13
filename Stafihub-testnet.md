@@ -41,7 +41,6 @@ cp $HOME/go/bin/stafihubd /usr/local/bin
 ```
 NODE_MONIKER=<Your_Moniker>
 YOUR_TEST_WALLET=<Your_Wallet_Name>
-CHAIN_ID=stafihub-public-testnet-2
 
 echo 'export NODE_MONIKER='\"${NODE_MONIKER}\" >> $HOME/.bash_profile
 echo 'export YOUR_TEST_WALLET='\"${YOUR_TEST_WALLET}\" >> $HOME/.bash_profile
