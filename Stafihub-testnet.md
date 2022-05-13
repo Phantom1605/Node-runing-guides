@@ -25,6 +25,7 @@ go version
 ## Clone git repository:
 ```
 cd $HOME && git clone --branch public-testnet-v2 https://github.com/stafihub/stafihub
+cp $HOME/go/bin/stafihubd /usr/local/bin
 ```
 
 
@@ -45,7 +46,7 @@ CHAIN_ID=stafihub-public-testnet-2
 
 echo 'export NODE_MONIKER='\"${NODE_MONIKER}\" >> $HOME/.bash_profile
 echo 'export YOUR_TEST_WALLET='\"${YOUR_TEST_WALLET}\" >> $HOME/.bash_profile
-echo 'export CHAIN_ID=stafihub-public-testnet-2 >> $HOME/.bash_profile
+echo 'export CHAIN_ID=stafihub-public-testnet-2' >> $HOME/.bash_profile
 . $HOME/.bash_profile
 
 # let's check
