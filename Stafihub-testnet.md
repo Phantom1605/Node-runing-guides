@@ -175,9 +175,9 @@ stafihubd tx distribution withdraw-all-rewards \
 ## Unjail:
 ```
 stafihubd tx slashing unjail \
---chain-id $CHAIN_ID 
---from $YOUR_TEST_WALLET 
---gas=auto 
+--chain-id $CHAIN_ID \ 
+--from $YOUR_TEST_WALLET \ 
+--gas=auto \ 
 --gas-adjustment=1.4 \
 --gas-prices="0.025ufis"
 ```
