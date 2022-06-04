@@ -34,7 +34,7 @@ cd $HOME/stafihub && make install
 cp $HOME/go/bin/stafihubd /usr/local/bin
 ```
 
-## Add variobles.
+## Add variables.
 - Add moniker instead of <Your_Moniker>
 - Add wallet name instead of <Your_Wallet_Name>
 - Add chein id
