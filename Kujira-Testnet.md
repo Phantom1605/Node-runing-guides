@@ -29,7 +29,7 @@ make install
 cp $HOME/go/bin/kujirad /usr/local/bin
 ```
 
-## Add variobles:
+## Add variables:
 ```
 echo 'export NODE_MONIKER="Your node moniker"'>> $HOME/.bash_profile
 echo 'export YOUR_WALLET="You wallet name"'>> $HOME/.bash_profile
