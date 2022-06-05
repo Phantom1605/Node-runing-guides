@@ -16,7 +16,6 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 EOF
 
 . $HOME/.bash_profile
-
 cp /usr/local/go/bin/go /usr/bin
 go version
 ```
