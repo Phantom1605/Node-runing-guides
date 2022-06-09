@@ -129,7 +129,7 @@ seid tx staking create-validator \
   --pubkey=$(seid tendermint show-validator) \
   --moniker=$NODE_MONIKER \
   --chain-id=$CHAIN_ID \
-  --fees="2000us
+  --fees="2000usei"
 ```
 ## Check your node status:
 ```
