@@ -22,13 +22,13 @@ go version
 ## Clone git repository:
 ```
 git clone https://github.com/sei-protocol/sei-chain.git
-cd $HOME sei-chain
+cd $HOME/sei-chain
 git fetch origin --tags
 git checkout v1.0.2-beta
 ```
 ## Install:
 ```
-cd $HOME sei-chain
+cd $HOME/sei-chain
 make install
 cp $HOME/go/bin/cland /usr/local/bin
 ```
