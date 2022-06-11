@@ -206,7 +206,7 @@ sudo systemctl stop uptickd
 sudo systemctl disable uptickd
 rm /etc/systemd/system/uptickd.service
 rm -Rvf $HOME/uptick
-rm -Rvf $HOME/.uptick
+rm -Rvf $HOME/.uptickd
 ```
 
 ## Official links: 
