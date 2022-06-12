@@ -184,9 +184,11 @@ rm /etc/systemd/system/cland.service
 rm -Rvf $HOME/clan
 rm -Rvf $HOME/.clan
 ```
+## Official links:
 
-Official website: https://www.clan.network/
+[Website](https://www.clan.network/)
 
-Official documentations:
-1. https://docs.clan.network/nodes-and-validators/joining-testnets#cland-installation
-2. https://docs.clan.network/nodes-and-validators/joining-testnets#cland-installation
+[Explorer](https://secretnodes.com/clan/chains/playstation-2/validators?node_filter=Active)
+
+[Documentations](https://docs.clan.network/nodes-and-validators/joining-testnets#cland-installation)
+
