@@ -83,11 +83,6 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 ```
 kujirad tendermint unsafe-reset-all
 ```
-## Download addrbook:
-```
-wget -O $HOME/.kujira/config/addrbook.json https://raw.githubusercontent.com/Team-Kujira/networks/master/testnet/addrbook.json
-```
-
 ## install service to run the node:
 ```
 sudo tee /etc/systemd/system/kujirad.service > /dev/null <<EOF
