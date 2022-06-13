@@ -122,13 +122,13 @@ kujirad tx staking create-validator \
  --commission-max-change-rate=0.01 \
  --commission-max-rate=0.20 \
  --commission-rate=0.07 \
- --website=https:""\
+ --website=""\
  --identity="" \
  --min-self-delegation=1 \
- --pubkey  $(kujirad tendermint show-validator) \
- --moniker $NODE_MONIKER \
- --fees 300ukuji \
- --chain-id $CHAIN_ID
+ --pubkey=$(kujirad tendermint show-validator) \
+ --moniker=$NODE_MONIKER \
+ --fees=300ukuji \
+ --chain-id=$CHAIN_ID
 ```
 
 ## Useful commands:
@@ -150,22 +150,21 @@ kujirad keys show $YOUR_WALLET --bech val -a
 kujirad tx distribution withdraw-all-rewards \
  --chain-id=$CHAIN_ID \
  --from $YOUR_WALLET \
- --gas-prices=1ukuji \
- --fees 5000ukuji \                                                              
+ --fees=300ukuji \                                                              
 ```
 ### Delegate tokens to your validator:
 ```
 kujirad tx staking delegate $(kujirad keys show $YOUR_WALLET --bech val -a) <amountukuji> \
 --chain-id=$CHAIN_ID \
 --from=$YOUR_WALLET \
---fees 5000ukuji \
+--fees=300ukuji \
 ```
 ### Unjail:
 ```
 kujirad tx slashing unjail \
 --chain-id $CHAIN_ID \ 
 --from $YOUR_WALLET \  
---fees 5000ukuji \
+--fees=300ukuji \
 ```
 ### Stop the node:
 ```
