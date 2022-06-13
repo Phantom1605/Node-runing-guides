@@ -117,7 +117,7 @@ kujirad q bank balances $(kujirad keys show $YOUR_WALLET -a)
 ## Create validator:
 ```
 kujirad tx staking create-validator \
- --amount 100000000ukuji \
+ --amount 1000000ukuji \
  --from=$YOUR_WALLET \
  --commission-max-change-rate=0.01 \
  --commission-max-rate=0.20 \
