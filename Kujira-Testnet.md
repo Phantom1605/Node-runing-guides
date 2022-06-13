@@ -35,7 +35,7 @@ cp $HOME/go/bin/kujirad /usr/local/bin
 ```
 echo 'export NODE_MONIKER="Your node moniker"'>> $HOME/.bash_profile
 echo 'export YOUR_WALLET="You wallet name"'>> $HOME/.bash_profile
-echo 'export CHAIN_ID="harpoon-3"' >> $HOME/.bash_profile
+echo 'export CHAIN_ID="harpoon-4"' >> $HOME/.bash_profile
 . $HOME/.bash_profile
 
 # let's check
@@ -56,22 +56,28 @@ kujirad init $NODE_MONIKER --chain-id $CHAIN_ID --recover
 ```
 wget -O $HOME/.kujira/config/genesis.json https://raw.githubusercontent.com/Team-Kujira/networks/master/testnet/harpoon-3.json
 ```
-
 ## Configure your node:
 ```
-seeds="8e1590558d8fede2f8c9405b7ef550ff455ce842@51.79.30.9:26656,bfffaf3b2c38292bd0aa2a3efe59f210f49b5793@51.91.208.71:26656,106c6974096ca8224f20a85396155979dbd2fb09@198.244.141.176:26656"
-peers="111ba4e5ae97d5f294294ea6ca03c17506465ec5@208.68.39.221:26656,b16142de5e7d89ee87f36d3bbdd2c2356ca2509a@75.119.155.248:26656,ad7b2ecb931a926d60d1e034d0e37a83d0e265f1@109.107.181.127:26656,1b827c298f013900476c2eab25ce5ff75a6f8700@178.63.62.212:26656,111ba4e5ae97d5f294294ea6ca03c17506465ec5@208.68.39.221:26656,f114c02efc5aa7ee3ee6733d806a1fae2fbfb66b@5.189.178.222:46656,8980faac5295875a5ecd987a99392b9da56c9848@85.10.216.151:26656,3c3170f0bcbdcc1bef12ed7b92e8e03d634adf4e@65.108.103.236:27656"
+#set minimum gas price:
 
-sed -i "s/^seeds *=.*/seeds = \"$seeds\"/;" $HOME/.kujira/config/config.toml
-sed -i "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/;" $HOME/.kujira/config/config.toml
+sed -i -e "s/^minimum-gas-prices =./minimum-gas-prices = "0.00125ukuji"/" $HOME/.kujira/config/app.toml
+sed -i -e "s/^timeout_commit =./timeout_commit = "1500ms"/" $HOME/.kujira/config/config.toml``
+
+#set peers and seeds
+SEEDS=""
+PEERS="87ea1a43e7eecdd54399551b767599921e170399@52.215.221.93:26656,021b782ba721e799cd3d5a940fc4bdad4264b148@65.108.103.236:16656,1d6f841271a1a3f78c6772b480523f3bb09b0b0b@15.235.47.99:26656,ccd2861990a98dc6b3787451485b2213dd3805fa@185.144.99.234:26656,909b8da1ea042a75e0e5c10dc55f37711d640388@95.216.208.150:53756,235d6ac8aebf5b6d1e6d46747958c6c6ff394e49@95.111.245.104:26656,b525548dd8bb95d93903b3635f5d119523b3045a@194.163.142.29:26656,26876aff0abd62e0ab14724b3984af6661a78293@139.59.38.171:36347,21fb5e54874ea84a9769ac61d29c4ff1d380f8ec@188.132.128.149:25656,06ebd0b308950d5b5a0e0d81096befe5ba07e0b3@193.31.118.143:25656,f9ee35cf9aec3010f26b02e5b3354efaf1c02d53@116.203.135.192:26656,c014d76c1a0d1e0d60c7a701a7eff5d639c6237c@157.90.179.182:29656,0ae4b755e3da85c7e3d35ce31c9338cb648bba61@164.92.187.133:26656,202a3d8bd5a0e151ced025fc9cbff606845c6435@49.12.222.155:26656"
+sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.kujira/config/config.toml
 ```
 ## Configure pruning:
 ```
-sed -i "s/pruning *=.*/pruning = \"custom\"/g" $HOME/.kujira/config/app.toml
-sed -i "s/pruning-keep-recent *=.*/pruning-keep-recent = \"809\"/g" $HOME/.kujira/config/app.toml
-sed -i "s/pruning-interval *=.*/pruning-interval = \"43\"/g" $HOME/.kujira/config/app.toml
-#sed -i.bak -e "s/indexer *=.*/indexer = \"null\"/g" $HOME/.kujira/config/config.toml
-sed -i "s/index-events =.*/index-events = [\"tx.hash\",\"tx.height\"]/g" $HOME/.kujira/config/app.toml
+pruning="custom"
+pruning_keep_recent="100"
+pruning_keep_every="0"
+pruning_interval="50"
+sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.kujira/config/app.toml
+sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.kujira/config/app.toml
+sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.kujira/config/app.toml
+sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $HOME/.kujira/config/app.toml
 ```
 ## Unsafe restart all:
 ```
@@ -84,21 +90,17 @@ wget -O $HOME/.kujira/config/addrbook.json https://raw.githubusercontent.com/Tea
 
 ## install service to run the node:
 ```
-sudo tee /etc/systemd/system/kujirad.service > /dev/null <<'EOF'
+sudo tee /etc/systemd/system/kujirad.service > /dev/null <<EOF
 [Unit]
-Description=Kujirad Node
-After=network.target
+Description=kujira
+After=network-online.target
 
 [Service]
 User=$USER
-Type=simple
 ExecStart=$(which kujirad) start
 Restart=on-failure
+RestartSec=3
 LimitNOFILE=65535
-[Install]
-WantedBy=multi-user.target
-Storage=persistent
-EOF
 
 sudo systemctl restart systemd-journald
 sudo systemctl daemon-reload
@@ -113,11 +115,6 @@ journalctl -u kujirad -f -o cat
 ```
 curl http://localhost:26657/status | jq .result.sync_info.catching_up
 ```
-## Faucet:
-Get tokens in the faucet, change YOUR_WALLET_ADDRESS on your wallet address.
-```
-curl -X POST https://faucet.kujirad.app/YOUR WAllET_ADDRESS
-```
 ## Сheck your balance:
 ```
 kujirad q bank balances $(kujirad keys show $YOUR_WALLET -a)
@@ -125,17 +122,18 @@ kujirad q bank balances $(kujirad keys show $YOUR_WALLET -a)
 ## Create validator:
 ```
 kujirad tx staking create-validator \
---moniker=$NODE_MONIKER \
---amount=10000000ukuji \
---gas-prices=1ukuji \
---pubkey=$(kujirad tendermint show-validator) \
---chain-id=$CHAIN_ID \
---commission-max-change-rate=0.01 \
---commission-max-rate=0.20 \
---commission-rate=0.10 \
---min-self-delegation=1 \
---from=$YOUR_WALLET \
---yes \
+ --amount 100000000ukuji \
+ --from=$YOUR_WALLET \
+ --commission-max-change-rate=0.01 \
+ --commission-max-rate=0.20 \
+ --commission-rate=0.07 \
+ --website=https:""\
+ --identity="" \
+ --min-self-delegation=1 \
+ --pubkey  $(kujirad tendermint show-validator) \
+ --moniker $NODE_MONIKER \
+ --fees 300ukuji \
+ --chain-id $CHAIN_ID
 ```
 
 ## Useful commands:
@@ -157,21 +155,22 @@ kujirad keys show $YOUR_WALLET --bech val -a
 kujirad tx distribution withdraw-all-rewards \
  --chain-id=$CHAIN_ID \
  --from $YOUR_WALLET \
- --gas-prices=1ukuji
+ --gas-prices=1ukuji \
+ --fees 300ukuji \                                                              
 ```
 ### Delegate tokens to your validator:
 ```
 kujirad tx staking delegate $(kujirad keys show $YOUR_WALLET --bech val -a) <amountukuji> \
 --chain-id=$CHAIN_ID \
 --from=$YOUR_WALLET \
---fees 1000ukuji
+--fees 300ukuji \
 ```
 ### Unjail:
 ```
 kujirad tx slashing unjail \
 --chain-id $CHAIN_ID \ 
 --from $YOUR_WALLET \  
---gas-prices=1ukuji
+--fees 300ukuji \
 ```
 ### Stop the node:
 ```
