@@ -191,3 +191,5 @@ rm /etc/systemd/system/quicksilverd.service
 rm -Rvf $HOME/quicksilver
 rm -Rvf $HOME/.quicksilverd
 ```
+## Official links:
+[Github](https://github.com/ingenuity-build/testnets)
