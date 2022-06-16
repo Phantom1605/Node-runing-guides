@@ -76,6 +76,7 @@ pruning="custom"
 pruning_keep_recent="100"
 pruning_keep_every="0"
 pruning_interval="10"
+
 sed -i -e "s/^pruning *=.*/pruning = \"$pruning\"/" $HOME/.quicksilverd/config/app.toml
 sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"$pruning_keep_recent\"/" $HOME/.quicksilverd/config/app.toml
 sed -i -e "s/^pruning-keep-every *=.*/pruning-keep-every = \"$pruning_keep_every\"/" $HOME/.quicksilverd/config/app.toml
@@ -169,7 +170,6 @@ quicksilverd tx staking delegate $(cland keys show $YOUR_WALLET --bech val -a) <
 --gas-adjustment=1.4 \
 --gas-prices=0,025uqck
 ```
-
 ## Unjail:
 ```
 quicksilverd tx slashing unjail \
@@ -179,7 +179,6 @@ quicksilverd tx slashing unjail \
 --gas-adjustment=1.4 \
 --gas-prices=0,025uqck
 ```
-
 ## Stop the node:
 ```
 sudo systemctl stop cland
