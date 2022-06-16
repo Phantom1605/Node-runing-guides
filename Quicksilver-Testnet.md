@@ -115,7 +115,7 @@ quicksilverd status 2>&1 | jq .SyncInfo
 
 curl http://localhost:26657/status | jq .result.sync_info.catching_up
 ```
-## Check Node ID: node_id:
+## Check Node ID:
 ```
 curl localhost:26657/status | jq '.result.node_info.id'
 ```
