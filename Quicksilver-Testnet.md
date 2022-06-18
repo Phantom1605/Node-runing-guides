@@ -182,7 +182,7 @@ quicksilverd tx slashing unjail \
 ```
 ## Stop the node:
 ```
-sudo systemctl stop cland
+sudo systemctl stop quicksilverd
 ```
 ## Delete node files and directories:
 ```
