@@ -56,7 +56,7 @@ quicksilverd keys add $QUICKSILVER_WALLET --recover
 quicksilverd add-genesis-account $QUICKSILVER_WALLET 100000000uqck
 
 quicksilverd gentx $QUICKSILVER_WALLET 100000000uqck \
---chain-id=QUICKSILVER_CHAIN \
+--chain-id=$QUICKSILVER_CHAIN \
 --commission-rate=0.08 \
 --commission-max-rate=0.2 \
 --commission-max-change-rate=0.1 \
