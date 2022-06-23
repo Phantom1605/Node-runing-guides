@@ -134,28 +134,19 @@ curl localhost:26657/status
 ```
 quicksilverd tx distribution withdraw-all-rewards \
 --chain-id=$QUICKSILVER_CHAIN \
---from $QUICKSILVER_WALLET \
---gas auto \
---gas-adjustment=1.4 \
---gas-prices=0,025uqck
+--from $QUICKSILVER_WALLET
 ```
 ## Delegate tokens to your validator:
 ```
 quicksilverd tx staking delegate $(quicksilverd keys show $QUICKSILVER_WALLET --bech val -a) <amountuqck> \
 --chain-id=$QUICKSILVER_CHAIN \
---from=$QUICKSILVER_WALLET \
---gas auto \
---gas-adjustment=1.4 \
---gas-prices=0,025uqck
+--from=$QUICKSILVER_WALLET
 ```
 ## Unjail:
 ```
 quicksilverd tx slashing unjail \
 --chain-id $QUICKSILVER_CHAIN \ 
---from $QUICKSILVER_WALLET \ 
---gas=auto \ 
---gas-adjustment=1.4 \
---gas-prices=0,025uqck
+--from $QUICKSILVER_WALLET
 ```
 ## Stop the node:
 ```
@@ -170,4 +161,5 @@ rm -Rvf $HOME/quicksilver
 rm -Rvf $HOME/.quicksilverd
 ```
 Official links:
-Github https://github.com/ingenuity-build/testnets
+[Github](https://github.com/ingenuity-build/testnets)
+ 
