@@ -124,7 +124,7 @@ curl localhost:26657/status | jq '.result.node_info.id'
 ```
 ## Check your balance:
 ```
-quicksilverd q bank balances $(quicksilverd keys show QUICKSILVER_WALLET -a)
+quicksilverd q bank balances $(quicksilverd keys show $QUICKSILVER_WALLET -a)
 ```
 ## Check your node status:
 ```
