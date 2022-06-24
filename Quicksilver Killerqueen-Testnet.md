@@ -108,7 +108,7 @@ sudo systemctl status quicksilverd
 ```
 journalctl -u quicksilverd -f --output cat
 ```
-## tatus of sinchronization:
+## Status of sinchronization:
 ```
 quicksilverd status 2>&1 | jq .SyncInfo
 
