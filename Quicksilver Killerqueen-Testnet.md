@@ -178,4 +178,9 @@ rm -Rvf $HOME/.quicksilverd
 ## Official links:
 
 [Github](https://github.com/ingenuity-build/testnets)
+
+[Validator tasks](https://github.com/ingenuity-build/testnets/blob/main/killerqueen/VALIDATOR_TASKS.md)
+
+[Explorer](https://quicksilver.explorers.guru/validators)
+
  
