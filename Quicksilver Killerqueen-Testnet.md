@@ -76,12 +76,12 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 ```
 sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0uqck\"/" $HOME/.quicksilverd/config/app.toml
 ```
-Insafe reset all:
+## Unsafe reset all:
 ```
 quicksilverd tendermint unsafe-reset-all --home $HOME/.quicksilverd
 ```
 
-Install service to run the node:
+## Install service to run the node:
 ```
 sudo tee /etc/systemd/system/quicksilverd.service > /dev/null <<EOF
 [Unit]
