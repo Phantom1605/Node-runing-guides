@@ -126,6 +126,21 @@ curl localhost:26657/status | jq '.result.node_info.id'
 ```
 quicksilverd q bank balances $(quicksilverd keys show $QUICKSILVER_WALLET -a)
 ```
+## Create validator:
+```
+quicksilverd tx staking create-validator \
+--amount=10000000000uqck \
+--pubkey=$(quicksilverd tendermint show-validator) \
+--from=$QUICKSILVER_WALLET \
+--moniker=$QUICKSILVER_MONIKER \
+--chain-id=$QUICKSILVER_CHAIN \
+--website="" \
+--identity="" \
+--min-self-delegation=1 \
+--commission-rate=0.08 \
+--commission-max-rate=0.2 \
+--commission-max-change-rate=0.1
+```
 ## Check your node status:
 ```
 curl localhost:26657/status
