@@ -44,14 +44,13 @@ stafihubd status 2>&1 | jq .SyncInfo
 ```
 stafihubd keys add New_Wallet
 ```
+## Faucet:
+You can ask for tokens in the #faucet Discord channel. Send: !faucet send <YOUR_WALLET_ADDRESS>
+
 ## Transfer tokens from the new wallet to the old one:
 ```
 stafihubd tx bank send <sender> <receiver> <amount>ufis --chain-id=$chainName --gas-prices=0.025ufis --gas=auto --gas-adjustment=1.4
 ```
-
-## Faucet:
-You can ask for tokens in the #faucet Discord channel. Send: !faucet send <YOUR_WALLET_ADDRESS>
-
 ## Сheck your balance:
 ```
 stafihubd q bank balances $(stafihubd keys show $YOUR_TEST_WALLET -a)
