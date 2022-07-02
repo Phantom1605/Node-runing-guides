@@ -91,6 +91,7 @@ stafihubd tx staking create-validator \
 ```
 curl localhost:26657/status
 ```
-## looking for ourselves in the explorer
+## Official links:
+[Explorer](https://testnet.explorer.testnet.run/Quicksilver/gov)
 
-https://testnet.explorer.testnet.run/Quicksilver/gov
+[Github](https://github.com/stafihub/network/tree/main/testnets)
