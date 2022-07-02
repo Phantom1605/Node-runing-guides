@@ -80,6 +80,6 @@ stafihubd tx staking create-validator \
 curl localhost:26657/status
 ```
 ## Official links:
-[Explorer][(https://testnet-explorer.stafihub.io/stafi-hub-testnet/staking)
+[Explorer](https://testnet-explorer.stafihub.io/stafi-hub-testnet/staking)
 
 [Github](https://github.com/stafihub/network/tree/main/testnets)
