@@ -34,11 +34,11 @@ sudo systemctl restart stafihubd
 ```
 ## Check your node logs:
 ```
-journalctl -u quicksilverd -f --output cat
+journalctl -u stafihubd -f --output cat
 ```
 ## Status of sinchronization:
 ```
-quicksilverd status 2>&1 | jq .SyncInfo
+stafihubd status 2>&1 | jq .SyncInfo
 ```
 ## Create new wallet to top it up in the discord (the old wallet is not replenished):
 ```
