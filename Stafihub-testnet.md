@@ -1,5 +1,4 @@
 ## Install dependencies:
-
 ```
 sudo apt update && sudo apt upgrade -y
 sudo apt install make clang pkg-config libssl-dev build-essential git jq ncdu bsdmainutils -y
@@ -21,19 +20,15 @@ EOF
 cp /usr/local/go/bin/go /usr/bin
 go version
 ```
-
 ## Clone git repository:
 ```
 cd $HOME && git clone --branch public-testnet-v2 https://github.com/stafihub/stafihub
 ```
-
-
 ## Install:
 ```
 cd $HOME/stafihub && make install
 cp $HOME/go/bin/stafihubd /usr/local/bin
 ```
-
 ## Add variables.
 - Add moniker instead of <Your_Moniker>
 - Add wallet name instead of <Your_Wallet_Name>
@@ -56,22 +51,18 @@ echo $CHAIN_ID
 ```
 stafihubd keys add $YOUR_TEST_WALLET
 ```
-
 ## Init:
 ```
 stafihubd init $NODE_MONIKER --chain-id $CHAIN_ID --recover
 ```
-
 ## Download genesis:
 ```
 wget -O $HOME/.stafihub/config/genesis.json "https://raw.githubusercontent.com/stafihub/network/main/testnets/stafihub-public-testnet-2/genesis.json"
 ```
-
 ## Unsafe restart all:
 ```
 stafihubd tendermint unsafe-reset-all --home ~/.stafihub
 ```
-
 ## Configure your node:
 ```
 sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.01ufis\"/" $HOME/.stafihub/config/app.toml
@@ -79,8 +70,7 @@ sed -i '/\[grpc\]/{:a;n;/enabled/s/false/true/;Ta};/\[api\]/{:a;n;/enable/s/fals
 peers="4e2441c0a4663141bb6b2d0ea4bc3284171994b6@46.38.241.169:26656,79ffbd983ab6d47c270444f517edd37049ae4937@23.88.114.52:26656"
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.stafihub/config/config.toml
 ```
-
- ## Install service to run the node:
+## Install service to run the node:
  ```
 sudo tee <<EOF >/dev/null /etc/systemd/system/stafihubd.service
 [Unit]
@@ -107,13 +97,10 @@ sudo systemctl restart stafihubd
 ```
 journalctl -u stafihubd -f
 ```
-
 ## Status of sinchronization:
 ```
 stafihubd status 2>&1 | jq .SyncInfo
 ```
-
-
 ## Faucet:
 You can ask for tokens in the [#faucet](https://discord.gg/uKSdyZ8z) Discord channel.
 Send: `!faucet send <YOUR_WALLET_ADDRESS>`
@@ -122,7 +109,6 @@ Send: `!faucet send <YOUR_WALLET_ADDRESS>`
 ```
 stafihubd q bank balances $(stafihubd keys show $YOUR_TEST_WALLET -a)
 ```
-
 ## Create validator:
 ```
 stafihubd tx staking create-validator \
@@ -140,19 +126,11 @@ stafihubd tx staking create-validator \
  --min-self-delegation=1 \
  --gas-prices=0.025ufis
  ```
- 
  ## Check your node status:
  ```
  curl localhost:26657/status
  ```
- 
- 
- ## explorer of the stafihab testnet:
- https://testnet-explorer.stafihub.io/stafi-hub-testnet/staking
- 
- 
- 
- ## Delegate tokens to your validator:
+## Delegate tokens to your validator:
 ```
 stafihubd tx staking delegate $(stafihubd keys show $YOUR_TEST_WALLET --bech val -a) <amountufis> \
 --chain-id=$CHAIN_ID \
@@ -161,7 +139,6 @@ stafihubd tx staking delegate $(stafihubd keys show $YOUR_TEST_WALLET --bech val
 --gas-adjustment=1.4 \
 --gas-prices=0.025ufis
 ```
-
 ## Collect rewards:
 ```
 stafihubd tx distribution withdraw-all-rewards \
@@ -171,7 +148,6 @@ stafihubd tx distribution withdraw-all-rewards \
  --gas-adjustment=1.4 \
  --gas-prices="0.025ufis"
 ```
-
 ## Unjail:
 ```
 stafihubd tx slashing unjail \
@@ -181,12 +157,10 @@ stafihubd tx slashing unjail \
 --gas-adjustment=1.4 \
 --gas-prices="0.025ufis"
 ```
-
 ## Stop the node:
 ```
 sudo systemctl stop stafihubd
 ```
-
 ## Delete node files and directories:
 ```
 sudo systemctl stop stafihubd
@@ -195,3 +169,7 @@ rm /etc/systemd/system/stafihubd.service
 rm -Rvf $HOME/stafihub
 rm -Rvf $HOME/.stafihub
 ```
+## Official links:
+[Explorer](https://testnet-explorer.stafihub.io/stafi-hub-testnet/staking)
+
+[Github](https://github.com/stafihub/network/tree/main/testnets)
