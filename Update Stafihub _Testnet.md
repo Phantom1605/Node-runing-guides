@@ -1,3 +1,7 @@
+## Stop stafihub node;
+```
+sudo systemctl stafihubd
+```
 ## Delete stafihub directory:
 ```
 rm -Rvf $HOME/stafihub
@@ -30,7 +34,7 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.s
 ```
 ## Restart the node:
 ```
-sudo systemctl restart stafihubd
+1 sudo systemctl restart stafihubd
 ```
 ## Check your node logs:
 ```
