@@ -1,4 +1,4 @@
-## Stop your node;
+## Stop your node:
 ```
 sudo systemctl stafihubd
 ```
