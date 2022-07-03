@@ -12,7 +12,7 @@ cd $HOME && git clone --branch public-testnet-v3 https://github.com/stafihub/sta
 cd $HOME/stafihub && make install
 cp $HOME/go/bin/stafihubd /usr/local/bin
 ```
-## Change name of the network:
+## Change the network name stafihub-public-testnet-2 to stafihub-public testnet-3:
 ```
 nano $HOME/.bash_profile
 export CHAIN_ID="stafihub-public-testnet-3"
