@@ -175,7 +175,7 @@ stride tx slashing unjail \
 ```
 sudo systemctl stop stride
 ```
-##Delete node files and directories:
+## Delete node files and directories:
 ```
 sudo systemctl stop strided
 sudo systemctl disable strided
@@ -183,7 +183,7 @@ rm /etc/systemd/system/strided.service
 rm -Rvf $HOME/stride
 rm -Rvf $HOME/.stride
 ```
-Official documentations:
+## Official links:
   
 [Discord](http://stride.zone/discord)
 
