@@ -5,7 +5,7 @@ sudo apt install make clang pkg-config libssl-dev build-essential git jq ncdu bs
 ```
 ## Install Go:
 ```
-wget -O go1.18.2.linux-amd64.tar.gz https://go.dev/dl/go1.18.linux-amd64.tar.gz
+wget -O go1.18.2.linux-amd64.tar.gz https://golang.org/dl/go1.18.2.linux-amd64.tar.gz
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.2.linux-amd64.tar.gz && rm go1.18.2.linux-amd64.tar.gz
 
 cat <<'EOF' >> $HOME/.bash_profile
@@ -14,6 +14,10 @@ export GOPATH=$HOME/go
 export GO111MODULE=on
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 EOF
+
+. $HOME/.bash_profile
+cp /usr/local/go/bin/go /usr/bin
+go version
 
 . $HOME/.bash_profile
 cp /usr/local/go/bin/go /usr/bin
