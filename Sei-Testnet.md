@@ -30,7 +30,7 @@ git checkout v1.0.2-beta
 ```
 cd $HOME/sei-chain
 make install
-cp $HOME/go/bin/seid/usr/local/bin
+cp $HOME/go/bin/seid /usr/local/bin
 ```
 ## Verify installation:
 Verify that everything is OK.
