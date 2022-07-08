@@ -18,10 +18,6 @@ EOF
 . $HOME/.bash_profile
 cp /usr/local/go/bin/go /usr/bin
 go version
-
-. $HOME/.bash_profile
-cp /usr/local/go/bin/go /usr/bin
-go version
 ```
 ## Clone git repository and install:
 ```
