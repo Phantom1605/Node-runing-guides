@@ -37,7 +37,7 @@ echo 'export SEI_CHAIN="atlantic-1"' >> $HOME/.bash_profile
 # let's check
 echo $SEI_MONIKER
 echo $SEI_WALLET
-echo $SEI_SHAIN
+echo $SEI_CHAIN
 ```
 ## Init:
 ```
