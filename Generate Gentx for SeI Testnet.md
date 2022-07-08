@@ -73,3 +73,9 @@ quicksilverd gentx $SEI_WALLET 10000000usei \
 * Fork https://github.com/sei-protocol/testnet
 * Create a file gentx-{VALIDATOR_NAME}.json under the testnet/sei-incentivized-testnet/gentx folder in the forked repo, paste the copied text into the file.
 * Create a Pull Request to the main branch of the repository
+
+## Official links:
+[Official Docs](https://docs.seinetwork.io/nodes-and-validators/seinami-incentivized-testnet)
+
+[Discord](https://discord.gg/KPUTFzWYQC)
+
