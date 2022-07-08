@@ -43,12 +43,12 @@ echo $SEI_CHAIN
 ```
 seid init $SEI_MONIKER --chain-id $SEI_CHAIN
 ```
-## Recover or create New wallet:
-create new wallet:
+## Recover or create new wallet:
+* create new wallet:
 ```
 seid keys add $SEI_WALLET
 ```
-recover existing wallet:
+* recover existing wallet:
 ```
 seid keys add $SEI_WALLET --recover
 ```
