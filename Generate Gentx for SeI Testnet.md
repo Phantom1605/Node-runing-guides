@@ -58,7 +58,7 @@ seid add-genesis-account $SEI_WALLET 10000000usei
 ```
 ## Generate gentx:
 ```
-quicksilverd gentx $SEI_WALLET 10000000usei \
+seid gentx $SEI_WALLET 10000000usei \
 --chain-id=$SEI_CHAIN \
 --commission-rate=0.08 \
 --commission-max-rate=0.2 \
