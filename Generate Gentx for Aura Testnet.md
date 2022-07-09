@@ -21,7 +21,8 @@ go version
 ```
 ## Clone git repository and install:
 ```
-git clone https://github.com/aura-nw/aura && cd aura
+git clone https://github.com/aura-nw/aura
+cd aura
 git checkout euphoria
 make install
 cp $HOME/go/bin/aurad /usr/local/bin
