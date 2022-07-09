@@ -57,7 +57,8 @@ aurad keys add $AURA_WALLET --recover
 
 ## Add genesis account:
 ```
-aurad add-genesis-account $AURA_WALLET 3600000000ueaura
+WALLET_ADDRESS=$(aurad keys show $AURA_WALLET -a)
+aurad add-genesis-account $WALLET_ADDRESS 3600000000ueaura
 ```
 ## Generate gentx:
 ```
@@ -77,3 +78,6 @@ aurad gentx $AURA_WALLET 3600000000ueaura \
 * Create a file gentx-{VALIDATOR_NAME}.json under the testnets/euphoria-1/gentx folder in the forked repo, paste the copied text into the file.
 * Upload your logo file into {VALOPER_ADDRESS}.png under the testnets/euphoria-1/logo folder.
 * Create a Pull Request to the main branch of the repository
+
+## Official links:
+[Official docs](https://github.com/aura-nw/testnets/blob/main/euphoria-1/pre-lauch-setup.md)
