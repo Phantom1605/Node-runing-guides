@@ -180,8 +180,10 @@ rm -Rvf $HOME/.sei
 ```
 ## Official links:
 
-[Discord](https://discord.gg/YpYQ77Db)
+[Discord](https://discord.gg/4XD3PnhH)
 
 [Official documentations](https://docs.seinetwork.io/nodes-and-validators/joining-testnets)
 
 [Medium](https://medium.com/@seinetwork)
+
+[Explorer](https://sei.explorers.guru/validators)
