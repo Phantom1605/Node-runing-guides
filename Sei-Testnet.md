@@ -80,7 +80,7 @@ sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0usei\"/" $HOME/.se
 ```
 ## Unsafe restart all:
 ```
-seid tendermint unsafe-reset-all --home ~/.sei
+seid tendermint unsafe-reset-all --home $HOME/.sei
 ```
 ## install service to run the node:
 ```
