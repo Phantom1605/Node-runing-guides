@@ -1,7 +1,7 @@
 ## Install dependencies:
 ```cd $HOME
 sudo apt update && sudo apt upgrade -y
-sudo apt install make clang pkg-config libssl-dev build-essential git jq ncdu bsdmainutils -y
+sudo apt install make clang pkg-config libssl-dev build-essential git jq ncdu bsdmainutils curl -y
 ```
 ## Install Go:
 ```
