@@ -124,6 +124,7 @@ seid q bank balances $(seid keys show $SEI_WALLET -a)
 ```
 seid tx staking create-validator \
   --amount 1000000usei \
+  --from $SEI_WALLET \
   --commission-max-change-rate=0.01 \
   --commission-max-rate=0.2 \
   --commission-rate=0.08 \
