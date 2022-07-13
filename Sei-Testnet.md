@@ -114,7 +114,7 @@ seid status 2>&1 | jq .SyncInfo
 curl http://localhost:26657/status | jq .result.sync_info.catching_up
 ```
 ## Faucet: 
-Go to discord on the testnet-faucet channel
+Go to discord on the atlantic fauset channel
 
 ## Сheck your balance:
 ```
