@@ -58,7 +58,7 @@ wget -qO $HOME/.stride/config/genesis.json "https://raw.githubusercontent.com/St
 
 ## Unsafe restart all:
 ```
-strided tendermint unsafe-reset-all --home $HOME/.stride
+strided tendermint unsafe-reset-all --home ~/.stride
 ```
 
 ## Configure your node:
@@ -92,7 +92,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which strided) start --home $HOME/.stride
+ExecStart=$(which strided) start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
