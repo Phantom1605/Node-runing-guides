@@ -27,7 +27,7 @@ go version
 cd $HOME
 git clone https://github.com/Stride-Labs/stride.git
 cd stride
-git checkout afabdb8e17b4a2dac6906b61b80b37c60638a7f0
+git checkout bbd47cf5dc52f75e3689663dc12a406d8ef718a2
 make build
 sudo cp $HOME/stride/build/strided /usr/local/bin
 ```
@@ -63,8 +63,8 @@ strided tendermint unsafe-reset-all --home $HOME/.stride
 
 ## Configure your node:
 ```
-SEEDS=""
-PEERS="c73d5d83ae121dd9f2ebbfd381724c844a5e5106@34.67.223.91:26656,f852421c9279a831bd787d982b853a4cbdeca6c6@65.108.209.4:36656,a6fb5a11a78dbd63335963d2d34f15baed280a53@65.108.242.49:26656,68ca73e494a38aad1b11815fd50721421424fe47@138.201.139.175:21016"
+SEEDS="209c8fc143ddb7424307ea250d6a3538384eb032@seedv1.poolparty.stridenet.co:26656"
+PEERS=""
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.stride/config/config.toml
 ```
 
@@ -131,7 +131,7 @@ strided q bank balances $(strided keys show $STRIDE_WALLET -a)
 ## Create validator:
 ```
 stride tx staking create-validator \
- --amount=<amount>ustrd \
+ --amount=10000000strd \
  --pubkey=$(strided tendermint show-validator) \
  --from=$STRIDE_WALLET \
  --moniker=$STRIDE_MONIKER \
