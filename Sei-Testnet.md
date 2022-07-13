@@ -134,7 +134,7 @@ seid tx staking create-validator \
   --identity= ""\
   --pubkey=$(seid tendermint show-validator) \
   --moniker=$SEI_MONIKER \
-  --chain-id=$SEI_CHAIN \
+  --chain-id=$SEI_CHAIN
 ```
 ## Check your node status:
 ```
