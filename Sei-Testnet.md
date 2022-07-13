@@ -91,7 +91,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which seid) start --home $HOME/.sei
+ExecStart=$(which seid) start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
