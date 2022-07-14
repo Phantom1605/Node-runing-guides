@@ -53,7 +53,7 @@ You can ask for tokens in the #faucet Discord channel. Send: !faucet send <YOUR_
 
 ## Transfer tokens from the new wallet to the old one:
 ```
-stafihubd tx bank send <sender> <receiver> <amount>ufis --chain-id=$chainName --gas-prices=0.025ufis --gas=auto --gas-adjustment=1.4
+stafihubd tx bank send <sender> <receiver> <amount>ufis --chain-id=$CHAIN_ID --gas-prices=0.025ufis --gas=auto --gas-adjustment=1.4
 ```
 ## Сheck your balance:
 ```
