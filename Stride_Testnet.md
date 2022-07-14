@@ -27,7 +27,7 @@ go version
 cd $HOME
 git clone https://github.com/Stride-Labs/stride.git
 cd stride
-git checkout bbd47cf5dc52f75e3689663dc12a406d8ef718a2
+git checkout c53f6c562d9d3e098aab5c27303f41ee055572cb
 make build
 sudo cp $HOME/stride/build/strided /usr/local/bin
 ```
@@ -35,7 +35,7 @@ sudo cp $HOME/stride/build/strided /usr/local/bin
 ```
 echo 'export STRIDE_MONIKER="Your Moniker name"'>> $HOME/.bash_profile
 echo 'export STRIDE_WALLET="Your Wallet name"'>> $HOME/.bash_profile
-echo 'export STRIDE_CHEIN="STRIDE"' >> $HOME/.bash_profile
+echo 'export STRIDE_CHEIN="STRIDE-1"' >> $HOME/.bash_profile
 
 # let's check
 echo $STRIDE_MONIKER
@@ -63,7 +63,7 @@ strided tendermint unsafe-reset-all --home ~/.stride
 
 ## Configure your node:
 ```
-SEEDS="209c8fc143ddb7424307ea250d6a3538384eb032@seedv1.poolparty.stridenet.co:26656"
+SEEDS="baee9ccc2496c2e3bebd54d369c3b788f9473be9@seedv1.poolparty.stridenet.co:26656"
 PEERS=""
 sed -i -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.stride/config/config.toml
 ```
