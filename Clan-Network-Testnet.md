@@ -157,20 +157,20 @@ cland tx distribution withdraw-all-rewards \
 ## Delegate tokens to your validator:
 ```
 cland tx staking delegate $(cland keys show $YOUR_WALLET --bech val -a) <amountuclan> \
---chain-id=$CHAIN_ID \
---from=$YOUR_WALLET \
---gas auto \
---gas-adjustment=1.4 \
---gas-prices=0uclan
+ --chain-id=$CHAIN_ID \
+ --from=$YOUR_WALLET \
+ --gas auto \
+ --gas-adjustment=1.4 \
+ --gas-prices=0uclan
 ```
 ## Unjail:
 ```
 cland tx slashing unjail \
---chain-id $CHAIN_ID \ 
---from $YOUR_WALLET \ 
---gas=auto \ 
---gas-adjustment=1.4 \
---gas-prices=0uclan
+ --chain-id $CHAIN_ID \ 
+ --from $YOUR_WALLET \ 
+ --gas=auto \ 
+ --gas-adjustment=1.4 \
+ --gas-prices=0uclan
 ```
 ## Stop the node:
 ```
