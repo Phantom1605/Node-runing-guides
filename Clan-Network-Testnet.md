@@ -126,19 +126,19 @@ cland q bank balances $(cland keys show $YOUR_WALLET -a)
 ## Create validator:
 ```
 cland tx staking create-validator \
-  --amount 1000000000uclan \
-  --commission-max-change-rate=0.1 \
-  --commission-max-rate=0.20 \
-  --commission-rate=0.1 \
-  --min-self-delegation=1 \
-  --details "validators write bios too" \
-  --website=""\
-  --identity= ""\
-  --pubkey=$(cland tendermint show-validator) \
-  --moniker=$NODE_MONIKER \
-  --chain-id=$CHAIN_ID \
-  --gas-prices=0uclan \
-  --from=$YOUR_WALLET
+ --amount 1000000000uclan \
+ --commission-max-change-rate=0.1 \
+ --commission-max-rate=0.20 \
+ --commission-rate=0.1 \
+ --min-self-delegation=1 \
+ --details "validators write bios too" \
+ --website=""\
+ --identity= ""\
+ --pubkey=$(cland tendermint show-validator) \
+ --moniker=$NODE_MONIKER \
+ --chain-id=$CHAIN_ID \
+ --gas-prices=0uclan \
+ --from=$YOUR_WALLET
 ```
 
 ## Check your node status:
