@@ -132,7 +132,7 @@ strided q bank balances $(strided keys show $STRIDE_WALLET -a)
 ## Create validator:
 ```
 strided tx staking create-validator \
---amount=10000000strd \
+--amount=10000000ustrd \
 --pubkey=$(strided tendermint show-validator) \
 --from=$STRIDE_WALLET \
 --moniker=$STRIDE_MONIKER \
