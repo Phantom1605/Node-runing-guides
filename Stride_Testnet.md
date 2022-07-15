@@ -46,7 +46,7 @@ echo $STRIDE_CHAIN
 
 ## Init:
 ```
-strided init $STRIDE_MONIKER --chain-id $STRIDE_ CHAIN
+strided init $STRIDE_MONIKER --chain-id $STRIDE_CHAIN
 ```
 ## Generate keys:
 ```
