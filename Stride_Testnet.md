@@ -136,13 +136,13 @@ stride tx staking create-validator \
  --pubkey=$(strided tendermint show-validator) \
  --from=$STRIDE_WALLET \
  --moniker=$STRIDE_MONIKER \
- --chain-id=$STRIDE_CHEIN \
+ --chain-id=$STRIDE_CHAIN \
  --details="" \
  --website="" \
  --identity="" \
  --commission-rate=0.08 \
- --commission-max-rate=0.5 \
- --commission-max-change-rate=0.1 \
+ --commission-max-rate=0.2 \
+ --commission-max-change-rate=0.01 \
  --min-self-delegation=1 \
 ```
 
