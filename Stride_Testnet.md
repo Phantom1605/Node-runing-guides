@@ -104,7 +104,7 @@ EOF
 
 sudo systemctl enable strided
 sudo systemctl daemon-reload
-sudo systemctl restart stridedd
+sudo systemctl restart strided
 sudo systemctl status strided
 ```
 
