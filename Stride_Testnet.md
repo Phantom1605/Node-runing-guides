@@ -191,3 +191,5 @@ rm -Rvf $HOME/.stride
 [Github](https://github.com/Stride-Labs/testnet)
 
 [Website](https://stride.zone/)
+
+[Explorer](https://poolparty.stride.zone/)
