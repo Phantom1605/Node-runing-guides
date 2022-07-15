@@ -161,16 +161,16 @@ kujirad tx distribution withdraw-all-rewards \
 ### Delegate tokens to your validator:
 ```
 kujirad tx staking delegate $(kujirad keys show $YOUR_WALLET --bech val -a) <amountukuji> \
---chain-id=$CHAIN_ID \
---from=$YOUR_WALLET \
---fees=300ukuji \
+ --chain-id=$CHAIN_ID \
+ --from=$YOUR_WALLET \
+ --fees=300ukuji \
 ```
 ### Unjail:
 ```
 kujirad tx slashing unjail \
---chain-id $CHAIN_ID \ 
---from $YOUR_WALLET \  
---fees=300ukuji \
+ --chain-id $CHAIN_ID \ 
+ --from $YOUR_WALLET \  
+ --fees=300ukuji \
 ```
 ### Stop the node:
 ```
