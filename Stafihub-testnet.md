@@ -133,11 +133,11 @@ stafihubd tx staking create-validator \
 ## Delegate tokens to your validator:
 ```
 stafihubd tx staking delegate $(stafihubd keys show $YOUR_TEST_WALLET --bech val -a) <amountufis> \
---chain-id=$CHAIN_ID \
---from=$YOUR_TEST_WALLET \
---gas auto \
---gas-adjustment=1.4 \
---gas-prices=0.025ufis
+ --chain-id=$CHAIN_ID \
+ --from=$YOUR_TEST_WALLET \
+ --gas auto \
+ --gas-adjustment=1.4 \
+ --gas-prices=0.025ufis
 ```
 ## Collect rewards:
 ```
@@ -151,11 +151,11 @@ stafihubd tx distribution withdraw-all-rewards \
 ## Unjail:
 ```
 stafihubd tx slashing unjail \
---chain-id $CHAIN_ID \ 
---from $YOUR_TEST_WALLET \ 
---gas=auto \ 
---gas-adjustment=1.4 \
---gas-prices="0.025ufis"
+ --chain-id $CHAIN_ID \ 
+ --from $YOUR_TEST_WALLET \ 
+ --gas=auto \ 
+ --gas-adjustment=1.4 \
+ --gas-prices="0.025ufis"
 ```
 ## Stop the node:
 ```
