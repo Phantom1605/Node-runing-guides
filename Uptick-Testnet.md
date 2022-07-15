@@ -138,33 +138,33 @@ cland q bank balances $(uptickd keys show $YOUR_WALLET -a)
 ## Create validator:
 ```
 uptickd tx staking create-validator \
-  --amount 1000000auptick \
-  --commission-max-change-rate="0.10" \
-  --commission-max-rate="0.20" \
-  --commission-rate="0.10" \
-  --min-self-delegation="1000000" \
-  --details "" \
-  --website=""\
-  --identity= ""\
-  --pubkey=$(uptickd tendermint show-validator) \
-  --moniker=$NODE_MONIKER \
-  --chain-id=$CHAIN_ID \
-  --gas="auto" \
+ --amount 1000000auptick \
+ --commission-max-change-rate="0.10" \
+ --commission-max-rate="0.20" \
+ --commission-rate="0.10" \
+ --min-self-delegation="1000000" \
+ --details "" \
+ --website=""\
+ --identity= ""\
+ --pubkey=$(uptickd tendermint show-validator) \
+ --moniker=$NODE_MONIKER \
+ --chain-id=$CHAIN_ID \
+ --gas="auto" \
   --gas-prices="0.025auptick" \
   --from=$YOUR_WALLET
 ```
 ## Edit validator:
 ```
 uptickd tx staking edit-validator
-  --moniker=$NODE_MONIKER \
-  --website="Your website" \
-  --identity="Your identety" \
-  --details="" \
-  --chain-id=$CHAIN_ID \
-  --gas="auto" \
-  --gas-prices="0.025auptick" \
-  --from=$YOUR_WALLET \
-  --commission-rate="0.10"
+ --moniker=$NODE_MONIKER \
+ --website="Your website" \
+ --identity="Your identety" \
+ --details="" \
+ --chain-id=$CHAIN_ID \
+ --gas="auto" \
+ --gas-prices="0.025auptick" \
+ --from=$YOUR_WALLET \
+ --commission-rate="0.10"
   ```
 
 ## Check your node status:
@@ -173,7 +173,7 @@ curl localhost:26657/status
 ```
 ## Collect rewards:
 ```
-cland tx distribution withdraw-all-rewards \
+uptickd tx distribution withdraw-all-rewards \
  --chain-id=$CHAIN_ID \
  --from $YOUR_WALLET \
  --gas auto \
