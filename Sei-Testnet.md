@@ -123,18 +123,18 @@ seid q bank balances $(seid keys show $SEI_WALLET -a)
 ## Create validator:
 ```
 seid tx staking create-validator \
-  --amount 1000000usei \
-  --from $SEI_WALLET \
-  --commission-max-change-rate=0.01 \
-  --commission-max-rate=0.2 \
-  --commission-rate=0.08 \
-  --min-self-delegation=1 \
-  --details "" \
-  --website=""\
-  --identity= ""\
-  --pubkey=$(seid tendermint show-validator) \
-  --moniker=$SEI_MONIKER \
-  --chain-id=$SEI_CHAIN
+ --amount 1000000usei \
+ --from $SEI_WALLET \
+ --commission-max-change-rate=0.01 \
+ --commission-max-rate=0.2 \
+ --commission-rate=0.08 \
+ --min-self-delegation=1 \
+ --details "" \
+ --website=""\
+ --identity= ""\
+ --pubkey=$(seid tendermint show-validator) \
+ --moniker=$SEI_MONIKER \
+ --chain-id=$SEI_CHAIN
 ```
 ## Check your node status:
 ```
