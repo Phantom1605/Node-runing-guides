@@ -183,19 +183,19 @@ cland tx distribution withdraw-all-rewards \
 ## Delegate tokens to your validator:
 ```
 uptickd tx staking delegate $(uptick keys show $YOUR_WALLET --bech val -a) <amountauptick> \
---chain-id=$CHAIN_ID \
---from=$YOUR_WALLET \
---gas auto \
---gas-prices=0,025auptick
+ --chain-id=$CHAIN_ID \
+ --from=$YOUR_WALLET \
+ --gas auto \
+ --gas-prices=0,025auptick
 ```
 
 ## Unjail:
 ```
 uptickd tx slashing unjail \
---chain-id $CHAIN_ID \ 
---from $YOUR_TEST_WALLET \ 
---gas=auto \ 
---gas-prices=0,025auptick
+ --chain-id $CHAIN_ID \ 
+ --from $YOUR_TEST_WALLET \ 
+ --gas=auto \ 
+ --gas-prices=0,025auptick
 ```
 
 ## Stop the node:
