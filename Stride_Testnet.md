@@ -143,7 +143,7 @@ strided tx staking create-validator \
  --commission-rate=0.08 \
  --commission-max-rate=0.2 \
  --commission-max-change-rate=0.01 \
- --min-self-delegation=1 \
+ --min-self-delegation=1
 ```
 
 ## Check your node status:
