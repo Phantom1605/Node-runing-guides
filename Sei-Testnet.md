@@ -154,16 +154,16 @@ seid tx distribution withdraw-all-rewards \
 ## Delegate tokens to your validator:
 ```
 seid tx staking delegate $(seid keys show $YOUR_TEST_WALLET --bech val -a) <amountusei> \
---chain-id=$SEI_CHAIN \
---from=$SEI_WALLET \
---gas auto \
+ --chain-id=$SEI_CHAIN \
+ --from=$SEI_WALLET \
+ --gas auto \
 ```
 ## Unjail:
 ```
 seid tx slashing unjail \
---chain-id $SEI_CHAIN \ 
---from $SEI_WALLET \ 
---gas=auto \ 
+ --chain-id $SEI_CHAIN \ 
+ --from $SEI_WALLET \ 
+ --gas=auto \ 
 ```
 
 ## Stop the node:
