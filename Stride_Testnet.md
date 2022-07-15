@@ -35,7 +35,7 @@ sudo cp $HOME/stride/build/strided /usr/local/bin
 ```
 echo 'export STRIDE_MONIKER="Your Moniker name"'>> $HOME/.bash_profile
 echo 'export STRIDE_WALLET="Your Wallet name"'>> $HOME/.bash_profile
-echo 'export STRIDE_CHEIN="STRIDE-1"' >> $HOME/.bash_profile
+echo 'export STRIDE_CHAIN="STRIDE-1"' >> $HOME/.bash_profile
 . $HOME/.bash_profile
 
 # let's check
