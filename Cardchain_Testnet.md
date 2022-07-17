@@ -37,10 +37,6 @@ echo $CARDCHAIN_MONIKER
 echo $CARDCHAIN_WALLET
 echo $CARDCHAIN_CHAIN
 ```
-## Generate keys:
-```
-сardchain keys add $CARDCHAIN_WALLET
-```
 ## Init:
 ```
 Cardchain init $CARDCHAIN_MONIKER --chain-id $CARDCHAIN_CHAIN
