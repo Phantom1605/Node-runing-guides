@@ -187,4 +187,4 @@ rm -Rvf $HOME/.Cardchaind
 ## Official links:
 [Discord](https://discord.gg/Z3m2w5HE)
 
-[Explorer](https://cardchain.explorers.guru/)
+[Explorer](https://explorer.theamsolutions.info/Cardchain/staking)
