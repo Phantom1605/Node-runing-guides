@@ -192,4 +192,4 @@ rm -Rvf $HOME/.stride
 
 [Website](https://poolparty.stride.zone/STRIDE/staking)
 
-[Explorer](https://poolparty.stride.zone/)
+[Explorer](https://poolparty.stride.zone/STRIDE/staking)
