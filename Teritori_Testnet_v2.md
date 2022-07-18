@@ -181,6 +181,8 @@ rm -Rvf $HOME/.teritorid
 
 [Discord](https://discord.gg/QCMR9WQ7)
 
-[Github](https://github.com/TERITORI/teritori-chain/tree/main/testnet/teritori-testnet-v2)
+[Official docs](https://github.com/TERITORI/teritori-chain/tree/main/testnet/teritori-testnet-v2)
+
+[Github](https://github.com/TERITORI/teritori-chain)
 
 [Explorer](https://teritori.explorers.guru/validators)
