@@ -190,6 +190,4 @@ rm -Rvf $HOME/.stride
 
 [Github](https://github.com/Stride-Labs/testnet)
 
-[Website](https://poolparty.stride.zone/STRIDE/staking)
-
 [Explorer](https://poolparty.stride.zone/STRIDE/staking)
