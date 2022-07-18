@@ -150,6 +150,10 @@ strided tx staking create-validator \
 ```
 curl localhost:26657/status
 ```
+## Add liquid stake:
+```
+strided tx stakeibc liquid-stake 1000 uatom --from $STRIDE_WALLET --chain-id $STRIDE_CHEIN
+```
 ## Collect rewards:
 ```
 strided tx distribution withdraw-all-rewards \
