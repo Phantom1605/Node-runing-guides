@@ -149,21 +149,21 @@ seid query tendermint-validator-set | grep "$(seid tendermint show-validator | j
 seid tx distribution withdraw-all-rewards \
  --chain-id=$SEI_CHAIN \
  --from $SEI_WALLET \
- --gas auto \
+ --gas auto
 ```
 ## Delegate tokens to your validator:
 ```
 seid tx staking delegate $(seid keys show $YOUR_TEST_WALLET --bech val -a) <amountusei> \
  --chain-id=$SEI_CHAIN \
  --from=$SEI_WALLET \
- --gas auto \
+ --gas auto
 ```
 ## Unjail:
 ```
 seid tx slashing unjail \
  --chain-id $SEI_CHAIN \ 
  --from $SEI_WALLET \ 
- --gas=auto \ 
+ --gas=auto
 ```
 
 ## Stop the node:
