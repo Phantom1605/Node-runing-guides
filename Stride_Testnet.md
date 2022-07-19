@@ -158,23 +158,20 @@ strided tx stakeibc liquid-stake 1000 uatom --from $STRIDE_WALLET --chain-id $ST
 ```
 strided tx distribution withdraw-all-rewards \
  --chain-id=$STRIDE_CHAIN \
- --from $STRIDE_WALLET \
- --gas auto \
+ --from $STRIDE_WALLET
 ```
 ## Delegate tokens to your validator:
 ```
 strided tx staking delegate $(stride keys show $STRIDE_WALLET --bech val -a) <amountustrd> \
  --chain-id=$STRIDE_CHAIN \
- --from=$STRIDE_WALLET \
- --gas auto \
+ --from=$STRIDE_WALLET
 ```
 
 ## Unjail:
 ```
 stride tx slashing unjail \
  --chain-id $STRIDE_CHAIN \ 
- --from $STRIDE_WALLET \ 
- --gas=auto \ 
+ --from $STRIDE_WALLET 
 ```
 ## Stop the node:
 ```
