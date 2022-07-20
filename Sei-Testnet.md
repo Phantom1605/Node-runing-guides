@@ -172,7 +172,7 @@ sudo systemctl stop seid
 sudo systemctl stop seid
 sudo systemctl disable seid
 rm /etc/systemd/system/seid.service
-rm -Rvf $HOME/sei
+rm -Rvf $HOME/sei-chain
 rm -Rvf $HOME/.sei
 ```
 ## Official links:
