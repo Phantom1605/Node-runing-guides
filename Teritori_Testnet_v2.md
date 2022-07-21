@@ -52,7 +52,7 @@ seid init $TERITORI_MONIKER --chain-id $TERITORI_CHAIN
 seid keys add $TERITORI_WALLET
 ```
 
-## Download genesis and adrrbook:
+## Download genesis and addrbook:
 ```
 wget -qO $HOME/.teritorid/config/genesis.json "https://raw.githubusercontent.com/TERITORI/teritori-chain/main/testnet/teritori-testnet-v2/genesis.json"
 wget -qO $HOME/.teritorid/config/addrbook.json "https://raw.githubusercontent.com/StakeTake/guidecosmos/main/teritori/teritori-testnet-v2/addrbook.json"
