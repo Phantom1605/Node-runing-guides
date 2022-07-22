@@ -170,7 +170,7 @@ strided tx staking delegate $(stride keys show $STRIDE_WALLET --bech val -a) <am
 ## Unjail:
 ```
 stride tx slashing unjail \
- --chain-id $STRIDE_CHAIN \ 
+ --chain-id $STRIDE_CHAIN \
  --from $STRIDE_WALLET 
 ```
 ## Stop the node:
