@@ -169,7 +169,7 @@ strided tx staking delegate $(stride keys show $STRIDE_WALLET --bech val -a) <am
 
 ## Unjail:
 ```
-stride tx slashing unjail \
+strided tx slashing unjail \
  --chain-id $STRIDE_CHAIN \
  --from $STRIDE_WALLET 
 ```
