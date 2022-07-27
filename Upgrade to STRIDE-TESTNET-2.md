@@ -56,9 +56,26 @@ strided tx staking create-validator \
  --commission-max-change-rate=0.01 \
  --min-self-delegation=1
  ```
+ ## Check your node status:
+ ```
+ curl localhost:26657/status | jq
+ ```
  ## Delegate tokens to your validatir:
  ```
  strided tx staking delegate $(stride keys show $STRIDE_WALLET --bech val -a) <amountustrd> \
  --chain-id=$STRIDE_CHAIN \
  --from=$STRIDE_WALLET
  ```
+ ## Unjail:
+ ```
+strided tx slashing unjail \
+ --chain-id $STRIDE_CHAIN \
+ --from $STRIDE_WALLET
+ ```
+ ## Official links:
+ 
+[Discord](http://stride.zone/discord)
+
+[Github](https://github.com/Stride-Labs/testnet)
+
+[Exploree](https://stride.explorers.guru/validators)
