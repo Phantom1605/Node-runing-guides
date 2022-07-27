@@ -130,7 +130,7 @@ teritorid tx staking create-validator \
   --identity=""\
   --pubkey=$(teritorid tendermint show-validator) \
   --moniker=$TERITORI_MONIKR \
-  --chain-id=$TERITORI_CHAIN_ID
+  --chain-id=$TERITORI_CHAIN
 ```
 ## Check your node status:
 ```
