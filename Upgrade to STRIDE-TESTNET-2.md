@@ -33,7 +33,7 @@ strided tendermint unsafe-reset-all --home $HOME/.stride
 ## Start service:
 ```
 sudo systemctl start strided
-journalctl -fu strided -o cat
+journalctl -u strided -f --output cat
 ```
 ## Check your balance:
 ```
