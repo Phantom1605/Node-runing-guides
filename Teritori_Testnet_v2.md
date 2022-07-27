@@ -146,7 +146,7 @@ teritorid tx distribution withdraw-all-rewards \
 ## Delegate tokens to your validator:
 ```
 teritorid tx staking delegate $(teritorid keys show $TERITORI_WALLET --bech val -a) 10000000utori \
-  --chain-id=$TERITORICHAIN \
+  --chain-id=$TERITORI_CHAIN \
   --from=$TERITORI_WALLET
 ```
 ## Voting:
