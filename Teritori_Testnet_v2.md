@@ -169,7 +169,7 @@ sudo systemctl stop teritorid
 ```
 sudo systemctl stop teritorid
 sudo systemctl disable teritorid
-rm /etc/systemd/system/seid.service
+rm /etc/systemd/system/teritorid.service
 rm -Rvf $HOME/teritori
 rm -Rvf $HOME/.teritorid
 ```
