@@ -61,7 +61,7 @@ strided tx staking create-validator \
  ```
  ## Delegate tokens to your validatir:
  ```
- strided tx staking delegate $(stride keys show $STRIDE_WALLET --bech val -a) <amountustrd> \
+ strided tx staking delegate $(strided keys show $STRIDE_WALLET --bech val -a) <amountustrd> \
   --chain-id=$STRIDE_CHAIN \
   --from=$STRIDE_WALLET
  ```
