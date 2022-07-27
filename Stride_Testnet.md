@@ -31,7 +31,7 @@ git checkout c53f6c562d9d3e098aab5c27303f41ee055572cb
 make build
 sudo cp $HOME/stride/build/strided /usr/local/bin
 ```
-## Add variobles:
+## Add variables:
 ```
 echo 'export STRIDE_MONIKER="Your Moniker name"'>> $HOME/.bash_profile
 echo 'export STRIDE_WALLET="Your Wallet name"'>> $HOME/.bash_profile
