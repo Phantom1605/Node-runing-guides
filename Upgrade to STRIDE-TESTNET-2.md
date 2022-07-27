@@ -68,8 +68,8 @@ strided tx staking create-validator \
  ## Unjail:
  ```
 strided tx slashing unjail \
- --chain-id $STRIDE_CHAIN \
- --from $STRIDE_WALLET
+  --chain-id $STRIDE_CHAIN \
+  --from $STRIDE_WALLET
  ```
  ## Official links:
  
