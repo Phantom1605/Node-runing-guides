@@ -29,7 +29,6 @@ strided config chain-id $STRIDE_CHAIN
 ## Unsafe reset all:
 ```
 strided tendermint unsafe-reset-all --home $HOME/.stride
-
 ```
 ## Start service:
 ```
@@ -63,8 +62,8 @@ strided tx staking create-validator \
  ## Delegate tokens to your validatir:
  ```
  strided tx staking delegate $(stride keys show $STRIDE_WALLET --bech val -a) <amountustrd> \
- --chain-id=$STRIDE_CHAIN \
- --from=$STRIDE_WALLET
+  --chain-id=$STRIDE_CHAIN \
+  --from=$STRIDE_WALLET
  ```
  ## Unjail:
  ```
