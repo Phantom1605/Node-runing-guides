@@ -140,16 +140,14 @@ curl localhost:26657/status
 ```
 teritorid tx distribution withdraw-all-rewards \
   --chain-id=$TERITORI_CHAIN \
-  --from $TERITORI_WALLET \
-  --gas auto \
+  --from $TERITORI_WALLET
 ```
 
 ## Delegate tokens to your validator:
 ```
 teritorid tx staking delegate $(teritorid keys show $TERITORI_WALLET --bech val -a) 10000000utori \
   --chain-id=$TERITORICHAIN \
-  --from=$TERITORI_WALLET \
-  --gas auto \
+  --from=$TERITORI_WALLET
 ```
 ## Voting:
 ```
@@ -159,9 +157,8 @@ teritorid tx gov vote 1 yes --from $TERITORI_WALLET --chain-id=$TERITORI_CHAIN
 ## Unjail:
 ```
 teritorid tx slashing unjail \
---chain-id $TERITORI_CHAIN \ 
---from $TERITORI_WALLET \ 
---gas=auto \ 
+  --chain-id $TERITORI_CHAIN \ 
+  --from $TERITORI_WALLET 
 ```
 
 ## Stop the node:
