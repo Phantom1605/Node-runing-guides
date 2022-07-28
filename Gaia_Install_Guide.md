@@ -192,6 +192,7 @@ rm -Rvf $HOME/gaia
 rm -Rvf $HOME/.gaia
 ```
 Official links:
+
 [Discord](http://stride.zone/discord)
 
 [Explorer](https://poolparty.stride.zone/GAIA/staking)
