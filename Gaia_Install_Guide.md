@@ -191,7 +191,7 @@ rm /etc/systemd/system/junod.service
 rm -Rvf $HOME/gaia
 rm -Rvf $HOME/.gaia
 ```
-Official links:
+## Official links:
 
 [Discord](http://stride.zone/discord)
 
