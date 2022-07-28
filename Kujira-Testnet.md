@@ -181,7 +181,7 @@ sudo systemctl stop kujirad
 sudo systemctl stop kujirad
 sudo systemctl disable kujirad
 rm /etc/systemd/system/kudjirad.service
-rm -Rvf $HOME/kudjira
+rm -Rvf $HOME/kujira-core
 rm -Rvf $HOME/.kujira
 ```
 
