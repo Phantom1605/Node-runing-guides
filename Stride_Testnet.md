@@ -162,7 +162,7 @@ strided tx distribution withdraw-all-rewards \
 ```
 ## Delegate tokens to your validator:
 ```
-strided tx staking delegate $(stride keys show $STRIDE_WALLET --bech val -a) <amountustrd> \
+strided tx staking delegate $(strided keys show $STRIDE_WALLET --bech val -a) <amountustrd> \
  --chain-id=$STRIDE_CHAIN \
  --from=$STRIDE_WALLET
 ```
