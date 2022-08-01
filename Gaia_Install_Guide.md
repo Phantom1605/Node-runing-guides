@@ -117,7 +117,7 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable gaiad
 sudo systemctl restart gaiad
-sudo journalctl -u junod -f -o cat
+sudo journalctl -u gaiad -f -o cat
 ```
 ## Check your node logs:
 ```
