@@ -54,7 +54,7 @@ gaiad keys add $GAIA_WALLET
 ```
 gaiad keys add $GAIA_WALLET --recover
 ```
-## Download genesis and addrbook:
+## Download genesis:
 ```
 wget -qO $HOME/.gaia/config/genesis.json "https://raw.githubusercontent.com/Stride-Labs/testnet/main/poolparty/gaia/gaia_genesis.json"
 ```
@@ -79,7 +79,7 @@ sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0uatom\"/" $HOME/.g
 sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.0.0.1:26653\"%; s%^laddr = \"tcp://127.0.0.1:26657\"%laddr = \"tcp://127.0.0.1:26652\"%; s%^pprof_laddr = \"localhost:6060\"%pprof_laddr = \"localhost:6061\"%; s%^laddr = \"tcp://0.0.0.0:26656\"%laddr = \"tcp://0.0.0.0:26651\"%; s%^prometheus_listen_addr = \":26660\"%prometheus_listen_addr = \":26655\"%" $HOME/.gaia/config/config.toml
 sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:1317\"%; s%^address = \":8080\"%address = \":8080\"%; s%^address = \"0.0.0.0:9090\"%address = \"0.0.0.0:9092\"%; s%^address = \"0.0.0.0:9091\"%address = \"0.0.0.0:9093\"%" $HOME/.gaia/config/app.toml
 ```
-## Config app:
+## Config node:
 ```
 gaiad config node tcp://localhost:26652
 ```
