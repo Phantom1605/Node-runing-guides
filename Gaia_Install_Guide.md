@@ -153,7 +153,7 @@ gaiad tx staking create-validator \
   --website="" \
   --identity=""\
   --pubkey=$(gaiad tendermint show-validator) \
-  --moniker=$GAIA_MONIKR \
+  --moniker=$GAIA_MONIKER \
   --chain-id=$GAIA_CHAIN
 ```
 ## Check your node status:
