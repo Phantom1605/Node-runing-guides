@@ -125,7 +125,7 @@ sudo journalctl -u gaiad -f -o cat
 ```
 ## Status of sinchronization:
 ```
-Gaiad status 2>&1 | jq .SyncInfo
+gaiad status 2>&1 | jq .SyncInfo
 curl http://localhost:26652/status | jq .result.sync_info.catching_up
 ```
 ## Faucet:
@@ -138,11 +138,11 @@ $faucet-atom:<you gia wallet address>
 
 ## Check your balance:
 ```
-junod q bank balances $(gaiad keys show $GAIA_WALLET -a)
+gaiad q bank balances $(gaiad keys show $GAIA_WALLET -a)
 ```
 ## Create validator:
 ```
-junod tx staking create-validator \
+gaiad tx staking create-validator \
   --amount=1000000uatom \
   --from $GAIA_WALLET \
   --commission-max-change-rate=0.01 \
