@@ -133,7 +133,7 @@ Join to [Discord](http://stride.zone/discord) and navigate to:
 
 * #token-faucet to request test tokens
 ```
-$faucet-atom:<you gia wallet address>
+$faucet-atom:<you gaia wallet address>
 ```
 
 ## Check your balance:
