@@ -45,11 +45,15 @@ echo $GAIA_CHAIN
 ```
 gaiad init $GAIA_MONIKER --chain-id $GAIA_CHAIN
 ```
-## Generate keys:
+## Recover or create new wallet:
+* create new wallet:
 ```
 gaiad keys add $GAIA_WALLET
 ```
-
+* recover existing wallet:
+```
+gaiad keys add $GAIA_WALLET --recover
+```
 ## Download genesis and addrbook:
 ```
 wget -qO $HOME/.gaia/config/genesis.json "https://raw.githubusercontent.com/Stride-Labs/testnet/main/poolparty/gaia/gaia_genesis.json"
