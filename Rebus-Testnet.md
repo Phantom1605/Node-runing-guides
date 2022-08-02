@@ -121,7 +121,7 @@ curl http://localhost:26657/status | jq .result.sync_info.catching_up
 curl localhost:26657/status | jq '.result.node_info.id'
 ```
 ## Faucet:
-Join to [Discord](https://discord.gg/pNZCWv2D )and navigate to:
+Join to [Discord](https://discord.gg/pNZCWv2D ) and navigate to:
 * #faucet to request test tokens
 ```
 $request <your wallet address>
