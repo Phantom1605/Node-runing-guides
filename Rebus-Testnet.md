@@ -180,7 +180,7 @@ rm -Rvf $HOME/.rebusd
 
 [Official docs](https://github.com/rebuschain/rebus.testnet/tree/master/rebus_3333-1)
   
-[Discord](https://discord.gg/pNZCWv2D
+[Discord](https://discord.gg/pNZCWv2D)
 
 [Github](https://github.com/Stride-Labs/testnet)
 
