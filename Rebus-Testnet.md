@@ -135,7 +135,7 @@ rebusd tx staking create-validator \
  --moniker=$REBUS_MONIKER \
  --chain-id=$REBUS_CHAIN \
  --details="" \
- --website= ""\
+ --website= "" \
  --identity="" \
  --commission-rate=0.08 \
  --commission-max-rate=0.2 \
