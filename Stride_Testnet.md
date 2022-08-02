@@ -123,7 +123,11 @@ curl localhost:26657/status | jq '.result.node_info.id'
 ```
 ## Faucet:
 ```
-#Join our discord server to access the faucet
+Join to [Discord](http://stride.zone/discord) and navigate to:
+
+* #token-faucet to request test tokens
+```
+$faucet-stride:<you stride wallet address>
 ```
 ## Сheck your balance:
 ```
