@@ -122,7 +122,6 @@ curl http://localhost:26657/status | jq .result.sync_info.catching_up
 curl localhost:26657/status | jq '.result.node_info.id'
 ```
 ## Faucet:
-```
 Join to [Discord](http://stride.zone/discord) and navigate to:
 
 * #token-faucet to request test tokens
