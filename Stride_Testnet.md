@@ -155,7 +155,7 @@ curl localhost:26657/status
 ```
 ## Add liquid stake:
 ```
-strided tx stakeibc liquid-stake 1000 uatom --from $STRIDE_WALLET --chain-id $STRIDE_CHEIN
+strided tx stakeibc liquid-stake 1000 uatom --from $STRIDE_WALLET --chain-id $STRIDE_CHAIN
 ```
 ## Collect rewards:
 ```
