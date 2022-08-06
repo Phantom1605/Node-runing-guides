@@ -106,7 +106,7 @@ sudo systemctl restart seid
 ```
 ## Check your node logs:
 ```
-journalctl -u seid -f
+journalctl -u seid -f -o cat
 ```
 ## Status of sinchronization:
 ```
