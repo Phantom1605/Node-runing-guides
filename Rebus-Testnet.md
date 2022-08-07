@@ -126,6 +126,10 @@ Join to [Discord](https://discord.gg/pNZCWv2D ) and navigate to:
 ```
 $request <your wallet address>
 ```
+## Check your balance:
+```
+rebusd q bank balances $(rebusd keys show $REBUS_WALLET -a)
+```
 ## Create validator:
 ```
 rebusd tx staking create-validator \
@@ -182,6 +186,6 @@ rm -Rvf $HOME/.rebusd
   
 [Discord](https://discord.gg/pNZCWv2D)
 
-[Github](https://github.com/Stride-Labs/testnet)
+[Github](https://github.com/rebuschain)
 
-[Explorer](https://stride.explorers.guru/validators)
+[Explorer](https://rebus.explorers.guru/validators)
