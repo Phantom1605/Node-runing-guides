@@ -101,7 +101,7 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 
-sudo systemctl enable strided
+sudo systemctl enable rebusd
 sudo systemctl daemon-reload
 sudo systemctl restart rebusd
 sudo systemctl status rebusd
