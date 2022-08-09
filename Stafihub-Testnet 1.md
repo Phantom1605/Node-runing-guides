@@ -121,9 +121,9 @@ stafihubd q bank balances $(stafihubd keys show $YOUR_TEST_WALLET -a)
 stafihubd tx staking create-validator \
  --amount=1000000ufis \
  --pubkey=$(stafihubd tendermint show-validator) \
- --from=$YOUR_TEST_WALLET \
- --moniker=$NODE_MONIKER \
- --chain-id=$CHAIN_ID \
+ --from=$STAFIHUB_WALLET \
+ --moniker=$STAFIHUB_MONIKER \
+ --chain-id=$STAFIHUB_CHAIN \
  --details="" \
  --website=""\
  --identity= ""\
