@@ -74,7 +74,7 @@ seid gentx $SEI_WALLET 10000000usei \
 1. Copy the contents of $HOME/.sei/config/gentx/gentx-XXXXXXXX.json
 2. Fork https://github.com/sei-protocol/testnet and create your branch 
 3. Create a file {VALIDATOR_NAME}.json under the testnet/atlantic-subchains/atlantic-sub-2/gentx folder in the forked repo, paste the copied text into the file.
-4. Create a Pull Request to your branch of the repository
+4. Create a Pull Request from your branch to the main branch of the repository
 
 ## Await further instructions!
 
