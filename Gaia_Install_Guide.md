@@ -188,7 +188,7 @@ sudo systemctl stop gaiad
 ```
 sudo systemctl stop gaiad
 sudo systemctl disable gaiad
-rm /etc/systemd/system/junod.service
+rm /etc/systemd/system/gaiad.service
 rm -Rvf $HOME/gaia
 rm -Rvf $HOME/.gaia
 ```
