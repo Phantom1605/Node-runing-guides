@@ -55,7 +55,7 @@ seid keys add $SEI_WALLET --recover
 ```
 ## Download genesis:
 ```
-wget -qO $HOME/.sei/config/genesis.json "https://raw.githubusercontent.com/sei-protocol/testnet/main/atlantic-subchains/atlantic-sub-1/genesis.json""
+wget -qO $HOME/.sei/config/genesis.json "https://raw.githubusercontent.com/sei-protocol/testnet/main/atlantic-subchains/atlantic-sub-1/genesis.json"
 ```
 ## Set seeds and peers:
 ```
