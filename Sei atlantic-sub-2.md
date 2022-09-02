@@ -182,4 +182,4 @@ rm -Rvf $HOME/.sei
 
 [Medium](https://medium.com/@seinetwork)
 
-[Explorer](https://sei.explorers.guru/validators)
+[Explorer](https://testnet-explorer.brocha.in/sei%20atlantic-sub-2/staking)
