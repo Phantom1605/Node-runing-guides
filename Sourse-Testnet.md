@@ -134,7 +134,7 @@ Join to [Discord](https://discord.gg/bE2jcbSa) and navigate to:
 
 * #faucet to request test tokens
 ```
-$request:<you source wallet address>
+$request <you source wallet address>
 ```
 ## Сheck your balance:
 ```
