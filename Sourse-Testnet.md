@@ -51,10 +51,9 @@ sourced init $SOURCE_MONIKER --chain-id $SOURCE_CHAIN
 ```
 sourced keys add $SOURCE_WALLET
 ```
-## Download genesis and adrrbook:
+## Download genesis:
 ```
 curl -s  https://raw.githubusercontent.com/Source-Protocol-Cosmos/testnets/master/sourcechain-testnet/genesis.json > ~/.source/config/genesis.json
-wget -O $HOME/.source/config/addrbook.json "https://raw.githubusercontent.com/obajay/nodes-Guides/main/Source/addrbook.json"
 ```
 
 ## Unsafe restart all:
