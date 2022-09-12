@@ -62,7 +62,7 @@ hid-noded gentx $HID_WALLET 100000000000uhid \
 --commission-max-rate=1.0 \
 --commission-max-change-rate=0.01 \
 --min-self-delegation=100000000000 \
---website=https:"your website" \
+--website="your website" \
 --identity="your identity" \
 --moniker=$HID_MONIKER
 ```
