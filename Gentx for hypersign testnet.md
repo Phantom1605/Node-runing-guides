@@ -30,8 +30,8 @@ hid-noded version
 ```
 ## Add variables:
 ```
-echo 'export HID_MONIKER="you node moniker"'>> $HOME/.bash_profile
-echo 'export HID_WALLET="you wallet name"'>> $HOME/.bash_profile
+echo 'export HID_MONIKER="your node moniker"'>> $HOME/.bash_profile
+echo 'export HID_WALLET="your wallet name"'>> $HOME/.bash_profile
 echo 'export HID_CHAIN="jagrat"' >> $HOME/.bash_profile
 . $HOME/.bash_profile
 
@@ -62,8 +62,8 @@ hid-noded gentx $HID_WALLET 100000000000uhid \
 --commission-max-rate=1.0 \
 --commission-max-change-rate=0.01 \
 --min-self-delegation=100000000000 \
---website=https:"" \
---identity="" \
+--website=https:"your website" \
+--identity="your identity" \
 --moniker=$HID_MONIKER
 ```
 
