@@ -30,8 +30,8 @@ hid-noded version
 ```
 ## Add variables:
 ```
-echo 'export HID_MONIKER="Alex845"'>> $HOME/.bash_profile
-echo 'export HID_WALLET="Alex845W"'>> $HOME/.bash_profile
+echo 'export HID_MONIKER="you node moniker"'>> $HOME/.bash_profile
+echo 'export HID_WALLET="you wallet name"'>> $HOME/.bash_profile
 echo 'export HID_CHAIN="jagrat"' >> $HOME/.bash_profile
 . $HOME/.bash_profile
 
@@ -62,8 +62,8 @@ hid-noded gentx $HID_WALLET 100000000000uhid \
 --commission-max-rate=1.0 \
 --commission-max-change-rate=0.01 \
 --min-self-delegation=100000000000 \
---website=https://github.com/Phantom1605 \
---identity=2AD69C289965C63D \
+--website=https:"" \
+--identity="" \
 --moniker=$HID_MONIKER
 ```
 
