@@ -159,7 +159,7 @@ seid tx staking delegate $(seid keys show $SEI_WALLET --bech val -a) <amountusei
 ## Unjail:
 ```
 seid tx slashing unjail \
- --chain-id=$SEI_CHAIN \ 
+ --chain-id=$SEI_CHAIN \
  --from=$SEI_WALLET
 ```
 ## Stop the node:
