@@ -151,7 +151,7 @@ sudo systemctl stop hid-noded
 ```
 sudo systemctl stop hid-noded
 sudo systemctl disable hid-noded
-rm /etc/systemd/system/stafihubd.service
+rm /etc/systemd/system/hid-noded.service
 rm -Rvf $HOME/hid-noded
 rm -Rvf $HOME/.hid-node
 ```
@@ -177,3 +177,8 @@ sudo journalctl -u hid-noded -f -o cat
 [Official website](https://hypersign.id)
 
 [Discord](https://discord.gg/bFqnBAy5)
+
+## Explorers
+- https://exp.nodeist.net/T-Hypersign/staking
+- https://explorer.kjnodes.com/hypersign/staking
+- https://explorer.nodestake.top/hypersign-testnet
