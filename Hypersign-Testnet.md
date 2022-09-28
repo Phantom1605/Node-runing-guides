@@ -96,6 +96,10 @@ sudo systemctl enable hid-noded
 sudo systemctl restart hid-noded
 sudo journalctl -u hid-noded -f -o cat
 ```
+## Check your balance:
+```
+hid-noded q bank balances $(hid-noded keys show $HID_WALLET -a)
+```
 ## Create validator:
 ```
 hid-noded tx staking create-validator \
