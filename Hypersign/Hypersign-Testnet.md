@@ -46,7 +46,11 @@ hid-noded init $HID_MONIKER --chain-id $HID_CHAIN
 ```
 ## Download genesis:
 ```
-wget -qO $HOME/.hid-node/config/genesis.json "https://raw.githubusercontent.com/hypersign-protocol/networks/master/testnet/jagrat/final_genesis.json"
+wget -qO $HOME/.hid-node/config/genesis.json "https://raw.githubusercontent.com/Phantom1605/Node-runing-guides/main/Hypersign/addrbook.json"
+```
+## Download addrbook.json
+```
+wget -qO $HOME/.hid-node/config/addrbook.json "https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-incentivized-testnet/genesis.json"
 ```
 ## Add seeds and peers:
 ```
@@ -117,9 +121,10 @@ hid-noded tx staking create-validator \
   --commission-rate=0.06 
   ```
   ## Check your node status:
- ```
- curl localhost:26657/status
- ```
+```
+curl localhost:26657/status
+hid-noded status 2>&1 | jq .SyncInfo
+```
 ## Delegate tokens to your validator:
 ```
 hid-noded tx staking delegate $(hid-noded keys show $HID_WALLET --bech val -a) <amounuhid> \
@@ -150,6 +155,21 @@ rm /etc/systemd/system/stafihubd.service
 rm -Rvf $HOME/hid-noded
 rm -Rvf $HOME/.hid-node
 ```
+# If you have troubles with peers
+```
+hid-noded status 2>&1 | jq .SyncInfo
+sudo systemctl stop hid-noded
+wget -qO $HOME/.hid-node/config/addrbook.json "https://raw.githubusercontent.com/Phantom1605/Node-runing-guides/main/Hypersign/addrbook.json"
+
+max_num_outbound_peers="50"
+sed -i -e "s/^max_num_outbound_peers *=.*/max_num_outbound_peers = \"$max_num_outbound_peers\"/" $HOME/.hid-node/config/config.toml
+
+hid-noded tendermint unsafe-reset-all --home ~/.hid-node
+
+sudo systemctl restart hid-noded
+sudo journalctl -u hid-noded -f -o cat
+```
+
 ## Official links:
 
 [Github](https://github.com/hypersign-protocol)
