@@ -2,7 +2,7 @@
 ```
 cd $HOME
 sudo apt update && sudo apt upgrade -y
-sudo apt install curl tar wget clang pkg-config libssl-dev libleveldb-dev jq build-essential bsdmainutils git make ncdu htop nano mc screen unzip bc fail2ban htop -y
+sudo apt install curl tar wget clang pkg-config libssl-dev libleveldb-dev jq build-essential bsdmainutils git make ncdu htop nano mc screen unzip bc fail2ban -y
 ```
 
 ## Install Go:
