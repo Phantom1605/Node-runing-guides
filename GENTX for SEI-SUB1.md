@@ -66,7 +66,7 @@ seid gentx $SEI_WALLET 10000000usei \
 --commission-max-rate=0.2 \
 --commission-max-change-rate=0.1 \
 --pubkey=$(seid tendermint show-validator) \
---website=https:"" \
+--website="" \
 --identity="" \
 --moniker=$SEI_MONIKER
 ```
