@@ -54,7 +54,7 @@ empowerd keys add $EMPOWER_WALLET --recover
 ```
 ## Add genesis account:
 ```
-WALLET_ADDRESS=$(statesetd keys show $EMPOWER_WALLET -a)
+WALLET_ADDRESS=$(empowerd keys show $EMPOWER_WALLET -a)
 empowerd add-genesis-account $WALLET_ADDRESS 1000000umpwr
 ```
 ## Generate gentx:
