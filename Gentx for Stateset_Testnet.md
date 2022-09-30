@@ -63,15 +63,15 @@ statesetd add-genesis-account $WALLET_ADDRESS 10000000000ustate
 ## Generate gentx:
 ```
 statesetd gentx $STATESET_WALLET 9000000000ustate \
- --chain-id=$STATESET_CHAIN \
- --min-self-delegation=100000000000 \
- --commission-rate=0.06 \
- --commission-max-rate=0.2 \
- --commission-max-change-rate=0.1 \
- --pubkey=$(statesetd tendermint show-validator) \
- --website="" \
- --identity="" \
- --moniker=$STATESET_MONIKER
+--chain-id=$STATESET_CHAIN \
+--min-self-delegation=100000000000 \
+--commission-rate=0.06 \
+--commission-max-rate=1.0 \
+--commission-max-change-rate=0.01 \
+--pubkey=$(statesetd tendermint show-validator) \
+--website="" \
+--identity="" \
+--moniker=$STATESET_MONIKER
 ```
 ## Submit PR with Gentx
 1. Copy the contents of ${HOME}/.stateset/config/gentx/gentx-XXXXXXXX.json.
