@@ -73,6 +73,6 @@ empowerd gentx $EMPOWER_WALLET 1000000umpwr \
 ## Submit PR with Gentx
 1. Copy the contents of ${HOME}/.stateset/config/gentx/gentx-XXXXXXXX.json.
 2. Fork https://github.com/empowerchain/empowerchain  and create your branch
-3. Create a file gentx-<VALIDATOR_NAME>.json under the testnets/stateset-1-testnet/gentx/ folder in the forked repo, paste the copied text into the file.
+3. Create a file gentx-<VALIDATOR_NAME>.json under the empowerchain/testnets/altruistic-1/ folder in the forked repo, paste the copied text into the file.
 4. Create a Pull Request from your branch to main branch of the repository
 5. Await further instructions!
