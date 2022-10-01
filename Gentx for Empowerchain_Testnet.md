@@ -25,7 +25,6 @@ cd $HOME
 git clone https://github.com/empowerchain/empowerchain
 cd empowerchain/chain
 make install
-cp $HOME/go/bin/empowerchaind /usr/local/bin
 ```
 ## Add variables:
 ```
