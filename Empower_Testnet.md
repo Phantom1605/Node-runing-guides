@@ -133,7 +133,7 @@ curl http://localhost:15657/status | jq .result.sync_info.catching_up
 ```
 ## Check Node ID:
 ```
-curl localhost:13657/status | jq '.result.node_info.id'
+curl localhost:15657/status | jq '.result.node_info.id'
 ```
 ## Create validator:
 ```
