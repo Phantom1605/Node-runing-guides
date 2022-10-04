@@ -135,6 +135,12 @@ curl http://localhost:15657/status | jq .result.sync_info.catching_up
 ```
 curl localhost:15657/status | jq '.result.node_info.id'
 ```
+## Faucet:
+Join to [Discord](https://discord.gg/gjkjj8v7) and navigate to:
+* #faucet to request test tokens
+```
+$request <your wallet address> altruistic-1
+```
 ## Create validator:
 ```
 empowerd tx staking create-validator \
