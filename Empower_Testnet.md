@@ -129,7 +129,7 @@ sudo journalctl -u empowerd -f -o cat
 ## Status of sinchronization:
 ```
 empowerd status 2>&1 | jq .SyncInfo
-curl http://localhost:13657/status | jq .result.sync_info.catching_up
+curl http://localhost:15657/status | jq .result.sync_info.catching_up
 ```
 ## Check Node ID:
 ```
