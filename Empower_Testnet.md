@@ -77,7 +77,7 @@ sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${E
 ```
 ## Config node:
 ```
-empowerd config node tcp://localhost:$(EMPOWER_PORT)657
+empowerd config node tcp://localhost:)15657
 ```
 ## Set minimum gas prices:
 ```
