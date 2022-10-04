@@ -136,10 +136,14 @@ curl http://localhost:15657/status | jq .result.sync_info.catching_up
 curl localhost:15657/status | jq '.result.node_info.id'
 ```
 ## Faucet:
-Join to [Discord](https://discord.gg/gjkjj8v7) and navigate to:
+Join to [Discord](https://discord.gg/yHh4nQEP) and navigate to:
 * #faucet to request test tokens
 ```
 $request <your wallet address> altruistic-1
+```
+## Check your balance:
+```
+empowerd q bank balances $(empowerd keys show $EMPOWER_WALLET -a)
 ```
 ## Create validator:
 ```
@@ -192,6 +196,8 @@ rm -Rvf $HOME/empowerchain
 rm -Rvf $HOME/.empowerchain
 ```
 ## fficial links:
+[Discord](https://discord.gg/yHh4nQEP)
+
 [Github](https://github.com/empowerchain)
 
 [Website](https://www.empower.eco/)
