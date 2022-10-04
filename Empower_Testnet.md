@@ -96,7 +96,7 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 ```
 ## Disable indexing:
 ```
-indexer="null" && \
+indexer="null"
 sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.empowerchain/config/config.toml
 ```
 ## Install service file to run the node:
@@ -118,7 +118,7 @@ WantedBy=multi-user.target
 EOF
 
 sudo systemctl enable empowerd
-sudo systemctl daemon-empowerd
+sudo systemctl daemon-reload
 sudo systemctl restart empowerd
 sudo systemctl status empowerd
 ```
