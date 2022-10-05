@@ -56,9 +56,13 @@ empowerd keys add $EMPOWER_WALLET --recover
 ```
 wget -qO $HOME/.empowerchain/config/genesis.json "https://raw.githubusercontent.com/empowerchain/empowerchain/main/testnets/altruistic-1/genesis.json"
 ```
-## Unsafe restart all:
+## Unsafe restart all
 ```
 empowerd tendermint unsafe-reset-all --home ~/.empowerchain
+```
+## Download addrbook.json:
+```
+wget -qO $HOME/.empowerchain/config/addrbook.json https://raw.githubusercontent.com/Phantom1605/Node-runing-guides/main/Empower/addrbook.json
 ```
 ## Set seeds and peers:
 ```
@@ -69,6 +73,10 @@ sed -i.bak -e "s/^seeds =.*/seeds = \"$seeds\"/" $HOME/.empowerchain/config/conf
 sed -i 's/max_num_inbound_peers =.*/max_num_inbound_peers = 100/g' $HOME/.empowerchain/config/config.toml
 sed -i 's/max_num_outbound_peers =.*/max_num_outbound_peers = 100/g' $HOME/.empowerchain/config/config.toml
 ```
+## Set minimum gas prices:
+```
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0umpwr\"/" ~/.empowerchain/config/app.toml
+```
 ## Set custom ports:
 ```
 EMPOWER_PORT=15
@@ -78,10 +86,6 @@ sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${E
 ## Config node:
 ```
 empowerd config node tcp://localhost:15657
-```
-## Set minimum gas prices:
-```
-sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0umpwr\"/" ~/.empowerchain/config/app.toml
 ```
 ## Configure pruning:
 ```
