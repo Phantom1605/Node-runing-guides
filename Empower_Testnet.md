@@ -167,9 +167,9 @@ curl localhost:26657/status | jq
 ```
 ## Collect rewards:
 ```
-rebus tx distribution withdraw-all-rewards \
- --chain-id=$REBUS_CHAIN \
- --from $REBUS_WALLET
+empowerd tx distribution withdraw-all-rewards \
+ --chain-id=$EMPOWER_CHAIN \
+ --from $EMPOWER_WALLET
 ```
 ## Delegate tokens to your validator:
 ```
