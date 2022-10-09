@@ -181,7 +181,7 @@ empowerd tx staking delegate $(empowerd keys show $EMPOWER_WALLET --bech val -a)
 ```
 ## Unjail:
 ```
-rebusd tx slashing unjail \
+empowerd tx slashing unjail \
  --from $EMPOWER_WALLET 
 ```
 ## Stop the node:
