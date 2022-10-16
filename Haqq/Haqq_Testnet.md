@@ -178,13 +178,13 @@ haqqd tx distribution withdraw-rewards $(haqqd keys show $HAQQ_WALLET --bech val
 ```
 haqqd tx staking delegate $(haqqd keys show $EMPOWER_WALLET --bech val -a) <amontaISLM> \
  --chain-id=$HAQQ_CHAIN
- --from=$EMPOWER_WALLET
+ --from=$HAQQ_WALLET
  --gas=auto
 ```
 ## Unjail:
 ```
 empowerd tx slashing unjail \
- --from $EMPOWER_WALLET \
+ --from $HAQQ_WALLET \
  --chain-id=$HAQQ_CHAIN \
  --gas=auto
 ```
