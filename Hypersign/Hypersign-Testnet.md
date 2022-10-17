@@ -152,7 +152,7 @@ sudo systemctl stop hid-noded
 sudo systemctl stop hid-noded
 sudo systemctl disable hid-noded
 rm /etc/systemd/system/hid-noded.service
-rm -Rvf $HOME/hid-noded
+rm -Rvf $HOME/hid-node
 rm -Rvf $HOME/.hid-node
 ```
 # If you have troubles with peers
