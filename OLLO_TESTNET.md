@@ -32,7 +32,7 @@ ollod version
 ```
 echo 'export OLLO_MONIKER="Your Moniker name"'>> $HOME/.bash_profile
 echo 'export OLLO_WALLET="Your Wallet name"'>> $HOME/.bash_profile
-echo 'export OLLO_CHAIN="nois-testnet-003"' >> $HOME/.bash_profile
+echo 'export OLLO_CHAIN="ollo-testnet-0"' >> $HOME/.bash_profile
 . $HOME/.bash_profile
 
 # let's check
