@@ -127,7 +127,7 @@ sudo journalctl -u ollod -f -o cat
 ## Status of sinchronization:
 ```
 ollod status 2>&1 | jq .SyncInfo
-curl http://localhost:15657/status | jq .result.sync_info.catching_up
+curl http://localhost:16657/status | jq .result.sync_info.catching_up
 ```
 ## Check Node ID:
 ```
@@ -162,7 +162,7 @@ ollod tx staking create-validator \
   ```
   ## Check your node status:
 ```
-curl localhost:26657/status | jq
+curl localhost:16657/status | jq
 ```
 ## Collect rewards:
 ```
@@ -192,7 +192,7 @@ sudo systemctl stop ollod
 sudo systemctl disable ollod
 rm /etc/systemd/system/ollod.service
 rm -Rvf $HOME/ollo
-rm -Rvf $HOME/.illo
+rm -Rvf $HOME/.ollo
 ```
 ## Official links:
 [Discord](https://discord.gg/vQnbV34c)
