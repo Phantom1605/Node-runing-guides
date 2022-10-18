@@ -101,7 +101,7 @@ sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.ollo/config/config.to
 ```
 sudo tee /etc/systemd/system/ollod.service > /dev/null <<EOF
 [Unit]
-Description=Nois
+Description=ollo
 After=network-online.target
 
 [Service]
