@@ -134,7 +134,7 @@ $faucet <YOUR_WALLET_ADDRESS>
 ```
 ## Сheck your balance:
 ```
-cland q bank balances $(uptickd keys show $UPTICK_WALLET -a)
+uptickd q bank balances $(uptickd keys show $UPTICK_WALLET -a)
 ```
 ## Create validator:
 ```
