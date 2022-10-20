@@ -25,7 +25,7 @@ go version
 ```
 git clone https://github.com/UptickNetwork/uptick.git
 cd uptick
-git checkout vv0.2.3
+git checkout v0.2.3
 make install
 cp $HOME/go/bin/uptickd /usr/local/bin
 ```
