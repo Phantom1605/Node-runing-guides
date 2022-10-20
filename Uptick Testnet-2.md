@@ -140,7 +140,7 @@ uptickd q bank balances $(uptickd keys show $UPTICK_WALLET -a)
 ```
 uptickd tx staking create-validator \
  --amount 5000000000000000000auptick \
- --from=$UPTICK_WALLET
+ --from=$UPTICK_WALLET \
  --moniker=$UPTICK_MONIKER \
  --chain-id=$UPTICK_CHAIN \
  --pubkey=$(uptickd tendermint show-validator) \
