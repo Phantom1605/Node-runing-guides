@@ -81,7 +81,7 @@ sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${U
 ```
 ## Config node:
 ```
-uptickdd config node tcp://localhost:18657
+uptickd config node tcp://localhost:18657
 ```
 ## Add peers:
 ```
