@@ -126,7 +126,7 @@ journalctl -u uptickd -f
 ## Status of sinchronization:
 ```
 uptickd status 2>&1 | jq .SyncInfo
-curl http://localhost:26657/status | jq .result.sync_info.catching_up
+curl http://localhost:18657/status | jq .result.sync_info.catching_up
 ```
 ## Faucet:
 Join to [Discord](https://discord.gg/eStaNHZbm4) and navigate to:
@@ -136,7 +136,7 @@ $faucet <YOUR_WALLET_ADDRESS>
 ```
 ## Сheck your balance:
 ```
-cland q bank balances $(uptickd keys show $YOUR_WALLET -a)
+cland q bank balances $(uptickd keys show $UPTICK_WALLET -a)
 ```
 ## Create validator:
 ```
@@ -171,15 +171,14 @@ uptickd tx staking edit-validator
 
 ## Check your node status:
 ```
-curl localhost:26657/status
+curl localhost:18657/status
 ```
 ## Collect rewards:
 ```
 uptickd tx distribution withdraw-all-rewards \
  --chain-id=$UPTICK_CHAIN \
  --from $UPTICK_WALLET \
- --gas auto \
- --gas-prices=0,025auptick
+ --gas=auto
 ```
 
 ## Delegate tokens to your validator:
@@ -187,7 +186,7 @@ uptickd tx distribution withdraw-all-rewards \
 uptickd tx staking delegate $(uptick keys show $UPTICK_WALLET --bech val -a) <amountauptick> \
  --chain-id=$UPTICK_CHAIN \
  --from=$UPTICK_WALLET \
- --gas auto
+ --gas=auto
 ```
 
 ## Unjail:
