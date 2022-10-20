@@ -71,7 +71,7 @@ sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"$pruning_interval\"/" $
 ```
 ## Set minimum gas price:
 ```
-sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025auptick\"/;" ~/.uptickd/config/app.toml
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0auptick\"/;" ~/.uptickd/config/app.toml
 ```
 ## Set custom ports:
 ```
