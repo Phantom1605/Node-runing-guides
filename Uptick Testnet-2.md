@@ -144,8 +144,8 @@ uptickd tx staking create-validator \
  --moniker=$UPTICK_MONIKER \
  --chain-id=$UPTICK_CHAIN \
  --pubkey=$(uptickd tendermint show-validator) \
- --commission-max-change-rate="0.10" \
- --commission-max-rate="0.20" \
+ --commission-max-change-rate="0.01" \
+ --commission-max-rate="0.2" \
  --commission-rate="0.07" \
  --min-self-delegation="1000000" \
  --details="" \
