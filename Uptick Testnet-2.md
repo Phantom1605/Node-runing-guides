@@ -176,15 +176,12 @@ curl localhost:18657/status
 uptickd tx distribution withdraw-all-rewards \
  --chain-id=$UPTICK_CHAIN \
  --from $UPTICK_WALLET \
- --gas=auto
+ --gas auto
 ```
 
 ## Delegate tokens to your validator:
 ```
-uptickd tx staking delegate $(uptick keys show $UPTICK_WALLET --bech val -a) <amountauptick> \
- --chain-id=$UPTICK_CHAIN \
- --from=$UPTICK_WALLET \
- --gas=auto
+uptickd tx staking delegate<your valoper address>  5000000000000000000auptick --from $UPTICK_WALLET --chain-id uptick_7000-1
 ```
 
 ## Unjail:
