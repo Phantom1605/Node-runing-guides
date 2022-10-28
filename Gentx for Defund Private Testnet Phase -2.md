@@ -51,8 +51,8 @@ defundd keys add $DEFUND_WALLET
 ```
 ## Add genesis account:
 ```
-WALLET_ADDRESS=$(hid-noded keys show $DEFUND_WALLET -a)
-hid-noded add-genesis-account $WALLET_ADDRESS 100000000ufetf
+WALLET_ADDRESS=$(defundd keys show $DEFUND_WALLET -a)
+defundd add-genesis-account $WALLET_ADDRESS 100000000ufetf
 ```
 ## Generate gentx:
 ```
