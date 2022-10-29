@@ -46,11 +46,11 @@ hid-noded init $HID_MONIKER --chain-id $HID_CHAIN
 ```
 ## Download genesis:
 ```
-wget -qO $HOME/.hid-node/config/genesis.json "https://raw.githubusercontent.com/Phantom1605/Node-runing-guides/main/Hypersign/addrbook.json"
+wget -qO $HOME/.hid-node/config/genesis.json "https://raw.githubusercontent.com/hypersign-protocol/networks/master/testnet/jagrat/final_genesis.json"
 ```
 ## Download addrbook.json
 ```
-wget -qO $HOME/.hid-node/config/addrbook.json "https://raw.githubusercontent.com/sei-protocol/testnet/main/sei-incentivized-testnet/genesis.json"
+wget -qO $HOME/.hid-node/config/genesis.json "https://raw.githubusercontent.com/Phantom1605/Node-runing-guides/main/Hypersign/addrbook.json"
 ```
 ## Add seeds and peers:
 ```
