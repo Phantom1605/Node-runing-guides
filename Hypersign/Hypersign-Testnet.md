@@ -44,6 +44,15 @@ echo $HID_CHAIN
 ```
 hid-noded init $HID_MONIKER --chain-id $HID_CHAIN
 ```
+## Recover or create new wallet:
+* create new wallet:
+```
+hid-noded keys add $HID_WALLET
+```
+* recover existing wallet:
+```
+hid-noded keys add $HID_WALLET --recover
+```
 ## Download genesis:
 ```
 wget -qO $HOME/.hid-node/config/genesis.json "https://raw.githubusercontent.com/hypersign-protocol/networks/master/testnet/jagrat/final_genesis.json"
