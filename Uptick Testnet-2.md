@@ -187,8 +187,8 @@ uptickd tx staking delegate<your valoper address>  5000000000000000000auptick --
 ## Unjail:
 ```
 uptickd tx slashing unjail \
- --chain-id $UPTICK_CHAIN \ 
- --from $UPTICK_WALLET \ 
+ --chain-id $UPTICK_CHAIN \
+ --from $UPTICK_WALLET \
  --gas=auto
 ```
 
