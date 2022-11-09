@@ -176,7 +176,7 @@ haqqd tx distribution withdraw-rewards $(haqqd keys show $HAQQ_WALLET --bech val
 ```
 ## Delegate tokens to your validator:
 ```
-haqqd tx staking delegate $(haqqd keys show $EMPOWER_WALLET --bech val -a) <amontaISLM> \
+haqqd tx staking delegate $(haqqd keys show $HAQQ_WALLET --bech val -a) <amontaISLM> \
  --chain-id=$HAQQ_CHAIN
  --from=$HAQQ_WALLET
  --gas=auto
