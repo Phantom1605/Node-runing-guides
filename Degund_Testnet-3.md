@@ -5,7 +5,7 @@ sudo apt install make clang pkg-config libssl-dev curl build-essential git jq nc
 ```
 ## Install Go:
 ```
-wget -O go1.19.2.linux-amd64.tar.gz https://golang.org/dl/go1.19.1.linux-amd64.tar.gz
+wget -O go1.19.1.linux-amd64.tar.gz https://golang.org/dl/go1.19.1.linux-amd64.tar.gz
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.1linux-amd64.tar.gz && rm go1.19.1linux-amd64.tar.gz
 
 cat <<'EOF' >> $HOME/.bash_profile
@@ -74,7 +74,8 @@ sed -i.bak -e "s%^address = \"tcp://0.0.0.0:1317\"%address = \"tcp://0.0.0.0:${D
 ```
 ## Config node:
 ```
-haqqd config node tcp://localhost:35657
+defundd config node tcp://localhost:35657
+```
 ## Config pruning:
 ```
 pruning="custom"
@@ -95,6 +96,7 @@ sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0ufetf\"/" $HOME/.d
 defundd tendermint unsafe-reset-all --home ~/.defund
 ```
 ## Create servise file:
+```
 sudo tee /etc/systemd/system/defundd.service > /dev/null <<EOF
 [Unit]
 Description=fetf
@@ -111,19 +113,18 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 
-
 sudo systemctl enable defundd
 sudo systemctl daemon-defundd
 sudo systemctl restart defundd
 sudo systemctl status defundd
-
+```
 ## Check your node logs:
 ```
 sudo journalctl -u hqqd -f -o cat
 ```
 ## Status of sinchronization:
 ```
-haqqd status 2>&1 | jq .SyncInfo
+defundd status 2>&1 | jq .SyncInfo
 curl http://localhost:15657/status | jq .result.sync_info.catching_up
 ```
 ## Check Node ID:
@@ -131,7 +132,7 @@ curl http://localhost:15657/status | jq .result.sync_info.catching_up
 curl localhost:15657/status | jq '.result.node_info.id'
 ```
 ## Faucet:
-* Join to Discord and navigate to: #faucet to request test tokens:
+* Join to [Discord](https://discord.gg/PHfvKAa3) and navigate to: #faucet to request test tokens:
 ```
 !request YOUR_WALLET_ADDRESS
 ```
@@ -168,7 +169,7 @@ defundd tx distribution withdraw-all-rewards \
 ```
 ## Withdraw validator commission:
 ```
-haqqd tx distribution withdraw-rewards $(defundd keys show $DEFUND_WALLET --bech val -a) \
+defundd tx distribution withdraw-rewards $(defundd keys show $DEFUND_WALLET --bech val -a) \
 --chain-id $DEFUND_CHAIN \
 --from $DEFUND_WALLET \
 --commission \
