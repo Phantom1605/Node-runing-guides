@@ -47,11 +47,11 @@ ollod init $OLLO_MONIKER --chain-id $OLLO_CHAIN
 ## Recover or create new wallet:
 * create new wallet:
 ```
-ollod keys add $NOISE_WALLET
+ollod keys add $OLLO_WALLET
 ```
 * recover existing wallet:
 ```
-ollod keys add $NOISE_WALLET --recover
+ollod keys add $OLLO_WALLET --recover
 ```
 ## Download genesis:
 ```
