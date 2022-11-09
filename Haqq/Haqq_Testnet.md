@@ -190,7 +190,7 @@ empowerd tx slashing unjail \
 ```
 ## Stop the node:
 ```
-sudo systemctl stop empowerd
+sudo systemctl stop haqqd
 ```
 ## Delete node files and directories:
 ```
