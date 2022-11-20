@@ -132,7 +132,7 @@ curl http://localhost:35657/status | jq .result.sync_info.catching_up
 curl localhost:35657/status | jq '.result.node_info.id'
 ```
 ## Faucet:
-* Join to [Discord](https://discord.gg/PHfvKAa3) and navigate to: #faucet to request test tokens:
+* Join to [Discord](https://discord.gg/cfnH9Mrj) and navigate to: #faucet to request test tokens:
 ```
 !request YOUR_WALLET_ADDRESS
 ```
@@ -203,8 +203,6 @@ rm -Rvf $HOME/.defund
 ```
 ## Official links:
 
-[Discord](https://discord.gg/PHfvKAa3)
+[Discord](https://discord.gg/cfnH9Mrj)
 
-[Official instructions](https://docs.ollo.zone/validators/running_a_node)
-
-[Explorer](https://ollo.explorers.guru/validators)
+[Explorer](https://defund.explorers.guru/validators)
