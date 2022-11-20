@@ -99,7 +99,7 @@ defundd tendermint unsafe-reset-all --home ~/.defund
 ```
 sudo tee /etc/systemd/system/defundd.service > /dev/null <<EOF
 [Unit]
-Description=fetf
+Description=defund
 After=network-online.target
 
 [Service]
@@ -120,16 +120,16 @@ sudo systemctl status defundd
 ```
 ## Check your node logs:
 ```
-sudo journalctl -u hqqd -f -o cat
+sudo journalctl -u defundd -f -o cat
 ```
 ## Status of sinchronization:
 ```
 defundd status 2>&1 | jq .SyncInfo
-curl http://localhost:15657/status | jq .result.sync_info.catching_up
+curl http://localhost:35657/status | jq .result.sync_info.catching_up
 ```
 ## Check Node ID:
 ```
-curl localhost:15657/status | jq '.result.node_info.id'
+curl localhost:35657/status | jq '.result.node_info.id'
 ```
 ## Faucet:
 * Join to [Discord](https://discord.gg/PHfvKAa3) and navigate to: #faucet to request test tokens:
