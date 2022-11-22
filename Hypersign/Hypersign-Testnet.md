@@ -149,7 +149,7 @@ hid-noded tx distribution withdraw-all-rewards \
 ## Unjail:
 ```
 hid-noded tx slashing unjail \
- --chain-id $HID_CHAIN \ 
+ --chain-id $HID_CHAIN \
  --from $HID_WALLET
 ```
 ## Stop the node:
