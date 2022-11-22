@@ -172,16 +172,19 @@ curl localhost:26657/status | jq
 ## Collect rewards:
 ```
 empowerd tx distribution withdraw-all-rewards \
+ --chain-id $EMPOWER_CHAIN \
  --from $EMPOWER_WALLET
 ```
 ## Delegate tokens to your validator:
 ```
 empowerd tx staking delegate $(empowerd keys show $EMPOWER_WALLET --bech val -a) <amontumpwr> \
+ --chain-id $EMPOWER_CHAIN \
  --from=$EMPOWER_WALLET
 ```
 ## Unjail:
 ```
 empowerd tx slashing unjail \
+ --chain-id $EMPOWER_CHAIN \
  --from $EMPOWER_WALLET 
 ```
 ## Stop the node:
