@@ -181,7 +181,7 @@ uptickd tx distribution withdraw-all-rewards \
 
 ## Delegate tokens to your validator:
 ```
-uptickd tx staking delegate<your valoper address>  5000000000000000000auptick --from $UPTICK_WALLET --chain-id uptick_7000-1
+uptickd tx staking delegate $(uptick keys show $UPTICK_WALLET --bech val -a) 5000000000000000000auptick --from $UPTICK_WALLET --chain-id $UPTICK_CHAIN
 ```
 
 ## Unjail:
