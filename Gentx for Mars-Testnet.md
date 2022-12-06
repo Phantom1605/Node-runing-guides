@@ -56,7 +56,7 @@ marsd keys add $MARS_WALLET --recover
 ## Add genesis account:
 ```
 WALLET_ADDRESS=$(marsd keys show $MARS_WALLET -a)
-marsd add-genesis-account $WALLET_ADDRESS 1000000umars
+marsd genesis add-account $WALLET_ADDRESS 1000000umars
 ```
 ## Generate gentx:
 ```
