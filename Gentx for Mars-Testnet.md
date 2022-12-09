@@ -73,7 +73,7 @@ marsd genesis gentx $MARS_WALLET 1000000umars \
 
 ```
 ## Submit PR with Gentx
-1. Copy the contents of $HOME/.sei/config/gentx/gentx-XXXXXXXX.json
+1. Copy the contents of $HOME/.mars/config/gentx/gentx-XXXXXXXX.json
 2. Fork https://github.com/mars-protocol/networks and create your branch 
 3. Create a file gentx-<VALIDATOR_NAME>.json under the mars-1/gentxs folder in the forked repo, paste the copied text into the file.
 4. Create a Pull Request from your branch to main branch of the repository
