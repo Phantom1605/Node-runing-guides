@@ -3,7 +3,7 @@ This is a script for installing hypersign fullnode
 
 Run the script by command:
 ```
-wget -O gitopia_install.sh https://raw.githubusercontent.com/Phantom1605/Node-runing-guides/main/Gitopia/gitopia_install.sh && chmod +x gitopia_install.sh && ./hypersign_install.sh
+wget -O gitopia_install.sh https://raw.githubusercontent.com/Phantom1605/Node-runing-guides/main/Gitopia/gitopia_install.sh && chmod +x gitopia_install.sh && ./gitopia_install.sh
 ```
 ## Recover or create new wallet:
 * create new wallet:
