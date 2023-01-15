@@ -192,3 +192,4 @@ sudo journalctl -u hid-noded -f -o cat
 - https://explorer.kjnodes.com/hypersign/staking
 - https://explorer.nodestake.top/hypersign-testnet
 - https://exploreralex845.click/hypersign/staking
+- https://explorer.hypersign.id/hypersign-testnet/staking
