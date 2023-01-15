@@ -5,6 +5,9 @@ Run the script by command:
 ```
 wget -O gitopia_install.sh https://raw.githubusercontent.com/Phantom1605/Node-runing-guides/main/Gitopia/gitopia_install.sh && chmod +x gitopia_install.sh && ./gitopia_install.sh
 ```
+## Manual install
+If you want setting up node manually, you can follow [manual guide](https://github.com/Phantom1605/Node-runing-guides/blob/main/Gitopia/Gitopia-Testnet.md)
+
 ## Recover or create new wallet:
 * create new wallet:
 ```
