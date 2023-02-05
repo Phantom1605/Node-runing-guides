@@ -48,7 +48,7 @@ dymd init $DYMENSION_MONIKER --chain-id $DYMENSION_CHAIN
 ## Recover or create new wallet:
 * create new wallet:
 ```
-dymd keys add $DIMENSION_WALLET
+dymd keys add $DYMENSION_WALLET
 ```
 * recover existing wallet:
 ```
@@ -61,7 +61,7 @@ dymd add-genesis-account $WALLET_ADDRESS 600000000000udym
 ```
 ## Generate gentx:
 ```
-dymd gentx $DIMENSION_WALLET 500000000000udym \
+dymd gentx $DYMENSION_WALLET 500000000000udym \
 --chain-id=$DYMENSION_CHAIN \
 --commission-rate=0.06 \
 --commission-max-rate=0.2 \
