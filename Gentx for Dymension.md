@@ -57,11 +57,11 @@ dymd keys add $DYMENSION_WALLET --recover
 ## Add genesis account:
 ```
 WALLET_ADDRESS=$(dymd keys show $DYMENSION_WALLET -a)
-dymd add-genesis-account $WALLET_ADDRESS 100000000udym
+dymd add-genesis-account $WALLET_ADDRESS 600000000000udym
 ```
 ## Generate gentx:
 ```
-dymd gentx $DIMENSION_WALLET 600000000000udym \
+dymd gentx $DIMENSION_WALLET 500000000000udym \
 --chain-id=$DYMENSION_CHAIN \
 --commission-rate=0.06 \
 --commission-max-rate=0.2 \
