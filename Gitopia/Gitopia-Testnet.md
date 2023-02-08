@@ -126,7 +126,7 @@ gitopiad status 2>&1 | jq .SyncInfo
 ## Create validator:
 ```
 gitopiad tx staking create-validator \
---amount=5000000utlore \
+--amount=10000000utlore \
 --pubkey=$(gitopiad tendermint show-validator) \
 --from=$GITOPIA_WALLET \
 --moniker=$GITOPIA_MONIKER \
