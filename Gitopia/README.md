@@ -27,7 +27,7 @@ gitopiad q bank balances $(gitopiad keys show $GITOPIA_WALLET -a)
 ## Create validator:
 ```
 gitopiad tx staking create-validator \
---amount=5000000utlore \
+--amount=10000000utlore \
 --pubkey=$(gitopiad tendermint show-validator) \
 --from=$GITOPIA_WALLET \
 --moniker=$GITOPIA_MONIKER \
@@ -35,7 +35,7 @@ gitopiad tx staking create-validator \
 --details="" \
 --website="" \
 --identity="" \
---commission-rate=0.6 \
+--commission-rate=0.06 \
 --commission-max-rate=0.2 \
 --commission-max-change-rate=0.1 \
 --min-self-delegation=1 \
