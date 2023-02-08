@@ -134,7 +134,7 @@ gitopiad tx staking create-validator \
 --details="" \
 --website="" \
 --identity="" \
---commission-rate=0.6 \
+--commission-rate=0.06 \
 --commission-max-rate=0.2 \
 --commission-max-change-rate=0.1 \
 --min-self-delegation=1 \
