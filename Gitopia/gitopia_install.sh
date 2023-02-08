@@ -77,7 +77,7 @@ gitopiad config chain-id $GITOPIA_CHAIN
 hid-noded config node tcp://localhost:${GITOPIA_PORT}657
 
 # init
-hid-noded init $GITOPIA_MONIKER --chain-id $GITOPIA_CHAIN
+gitopiad init $GITOPIA_MONIKER --chain-id $GITOPIA_CHAIN
 
 # download genesis
 wget https://server.gitopia.com/raw/gitopia/testnets/master/gitopia-janus-testnet-2/genesis.json.gz
