@@ -38,7 +38,7 @@ gitopiad tx staking create-validator \
 --commission-rate=0.06 \
 --commission-max-rate=0.2 \
 --commission-max-change-rate=0.1 \
---min-self-delegation=1 \
+--min-self-delegation=1
 ```
 ## Withdraw rewards:
 ```
