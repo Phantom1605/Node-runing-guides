@@ -74,7 +74,7 @@ cp $HOME/go/bin/gitopiad /usr/local/bin
 
 # config
 gitopiad config chain-id $GITOPIA_CHAIN
-hid-noded config node tcp://localhost:${GITOPIA_PORT}657
+gitopiad config node tcp://localhost:${GITOPIA_PORT}657
 
 # init
 gitopiad init $GITOPIA_MONIKER --chain-id $GITOPIA_CHAIN
