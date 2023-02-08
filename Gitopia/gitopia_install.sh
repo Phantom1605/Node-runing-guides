@@ -24,7 +24,7 @@ sleep 2
 # set vars
 if [ ! $GITOPIA_MONIKER ]; then
 	read -p "Enter node name: " GITOPIA_MONIKER
-	echo 'export HID_MONIKER='$HID_MONIKER >> $HOME/.bash_profile
+	echo 'export GITOPIA_MONIKER='$GITOPIA_MONIKER >> $HOME/.bash_profile
 fi
 GITOPIA_PORT=23
 if [ ! $GITOPIA_WALLET ]; then
