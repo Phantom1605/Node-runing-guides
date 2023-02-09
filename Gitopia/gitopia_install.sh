@@ -31,7 +31,7 @@ if [ ! $GITOPIA_WALLET ]; then
 	read -p "Enter wallet name: " GITOPIA_WALLET
 	echo 'export GITOPIA_WALLET='$GITOPIA_WALLET >> $HOME/.bash_profile
 fi
-echo "export GITOPIA_CHAIN=janus-testnet-2" >> $HOME/.bash_profile
+echo "export GITOPIA_CHAIN=gitopia-janus-testnet-2" >> $HOME/.bash_profile
 echo "export GITOPIA_PORT=${GITOPIA_PORT}" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
