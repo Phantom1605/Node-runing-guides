@@ -83,4 +83,8 @@ rm -Rvf $HOME/.gitopia
 
 [Official instructions](https://docs.gitopia.com/validator-overview)
 
-[Explorer](https://explorer.gitopia.com/validators)
+## Explorers:
+
+- https://explorer.gitopia.com/validators
+
+- https://gitopia.explorers.guru/validators
