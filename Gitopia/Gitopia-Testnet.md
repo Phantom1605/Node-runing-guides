@@ -31,8 +31,7 @@ gitopiad version
 ```
 echo 'export GITOPIA_MONIKER="Your Moniker name"'>> $HOME/.bash_profile
 echo 'export GITOPIA_WALLET="Your Wallet name"'>> $HOME/.bash_profile
-echo 'export GITOPIA_CHAIN="gitopia-janus-testnet-2
-"' >> $HOME/.bash_profile
+echo 'export GITOPIA_CHAIN="gitopia-janus-testnet-2"' >> $HOME/.bash_profile
 . $HOME/.bash_profile
 
 #let's check
