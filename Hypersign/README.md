@@ -5,6 +5,9 @@ Run the script by command:
 ```
 wget -O hypersign_install.sh https://raw.githubusercontent.com/Phantom1605/Node-runing-guides/main/Hypersign/hypersign_install.sh && chmod +x hypersign_install.sh && ./hypersign_install.sh
 ```
+## Manual install
+If you want setting up node manually, you can follow [manual guide](https://github.com/Phantom1605/Node-runing-guides/blob/main/Hypersign/Hypersign-Testnet.md)
+
 ## State Sync:
 You can [state sync](https://github.com/Phantom1605/Node-runing-guides/blob/main/Hypersign/State-Sync%20for%20Hypersign.md) your node
 
