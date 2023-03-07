@@ -3,7 +3,7 @@ This is a script for installing hypersign fullnode
 
 Run the script by command:
 ```
-https://raw.githubusercontent.com/Phantom1605/Node-runing-guides/main/Nibiru/nibiru-install.sh
+wget -O nibiru_install.sh https://raw.githubusercontent.com/Phantom1605/Node-runing-guides/main/Nibiru/nibiru-install.sh
 ```
 ## Manual install
 If you want setting up node manually, you can follow [manual guide](https://github.com/Phantom1605/Node-runing-guides/blob/main/Nibiru/Nibiru-Testnet.md)
