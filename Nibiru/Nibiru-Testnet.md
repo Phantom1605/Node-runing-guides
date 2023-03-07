@@ -205,8 +205,8 @@ rm -Rvf $HOME/.nibid
 
 [Explorer](https://explorer.kjnodes.com/nibiru-testnet/staking)
 
-[Officcial instructions] (https://docs.nibiru.fi/)
+[Official instructions](https://docs.nibiru.fi/)
 
-[Officcial site] (https://nibiru.fi/)
+[Official site](https://nibiru.fi/)
 
-[NIbiru application] (https://app.nibiru.fi/)
+[NIbiru application](https://app.nibiru.fi/)
