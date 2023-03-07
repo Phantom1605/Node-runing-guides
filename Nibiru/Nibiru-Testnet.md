@@ -139,19 +139,19 @@ nibid q bank balances $(nibid keys show $NIBIRU_WALLET -a)
 ## Create validator:
 ```
 nibid tx staking create-validator \
-  --amount 10000000unibi \
-  --pubkey  $(nibid tendermint show-validator) \
-  --from $NIBIRU_WALLET \
-  --moniker $NIBIRU_MONIKER \
-  --chain-id $NIBIRU_CHAIN \
-  --details="" \
-  --website= "" \
-  --identity="" \
-  --min-self-delegation=1 \
-  --commission-max-change-rate=0.1 \
-  --commission-max-rate=0.2 \
-  --commission-rate=0.1 \
-  --gas-prices 0.025unibi
+--amount 10000000unibi \
+--pubkey  $(nibid tendermint show-validator) \
+--from $NIBIRU_WALLET \
+--moniker $NIBIRU_MONIKER \
+--chain-id $NIBIRU_CHAIN \
+--details="" \
+--website= "" \
+--identity="" \
+--min-self-delegation=1 \
+--commission-max-change-rate=0.1 \
+--commission-max-rate=0.2 \
+--commission-rate=0.1 \
+--gas-prices 0.025unibi
   ```
   ## Check your node status:
 ```
@@ -160,9 +160,9 @@ curl localhost:34657/status | jq
 ## Withdraw rewards:
 ```
 nibid tx distribution withdraw-all-rewards \
- --from $NIBIRU_WALLET
- --chain-id=$NIBIRU_CHAIN
- --gas-prices 0.025unibi
+--from $NIBIRU_WALLET
+--chain-id=$NIBIRU_CHAIN
+--gas-prices 0.025unibi
 ```
 ## Withdraw validator commission:
 ```
@@ -176,15 +176,15 @@ nibid tx distribution withdraw-rewards $(nibid keys show $NIBIRU_WALLET --bech v
 ## Delegate tokens to your validator:
 ```
 nibid tx staking delegate $(nibid keys show $DEFUND_WALLET --bech val -a) <amontunibi> \
- --chain-id=$NIBIRU_CHAIN
- --from=$NIBIRU_WALLET
- --gas-prices 0.025unibi
+--chain-id=$NIBIRU_CHAIN
+--from=$NIBIRU_WALLET
+--gas-prices 0.025unibi
 ```
 ## Unjail:
 ```
 nibid tx slashing unjail \
- --from $NIBIRU_WALLET \
- --chain-id=$NIBIRU_CHAIN \
+--from $NIBIRU_WALLET \
+--chain-id=$NIBIRU_CHAIN \
 --gas-prices 0.025unibi
 ```
 ## Stop the node:
