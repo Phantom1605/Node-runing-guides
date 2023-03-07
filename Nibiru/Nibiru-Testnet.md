@@ -160,8 +160,8 @@ curl localhost:34657/status | jq
 ## Withdraw rewards:
 ```
 nibid tx distribution withdraw-all-rewards \
- --from $DEFUND_WALLET
- --chain-id=$DEFUND_CHAIN
+ --from $NIBIRU_WALLET
+ --chain-id=$NIBIRU_CHAIN
  --gas-prices 0.025unibi
 ```
 ## Withdraw validator commission:
