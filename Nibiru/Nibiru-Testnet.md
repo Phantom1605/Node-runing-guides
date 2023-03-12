@@ -89,7 +89,7 @@ sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.025unibi\"/" $HOM
 ```
 ## Unsefe reset all:
 ```
-nibid tendermint unsafe-reset-all --home ~/.defund
+nibid tendermint unsafe-reset-all --home ~/.nibid
 ```
 ## Create servise file:
 ```
