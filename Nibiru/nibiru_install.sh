@@ -80,7 +80,9 @@ nibid config node tcp://localhost:${NIBIRU_PORT}657
 nibid init $NIBIRU_MONIKER --chain-id $NIBIRU_CHAIN
 
 # download genesis
-curl -s https://rpc.itn-1.nibiru.fi/genesis | jq -r .result.genesis > $HOME/.nibid/config/genesis.json
+NETWORK=nibiru-itn-1
+curl -s https://networks.itn.nibiru.fi/$NETWORK/genesis > $HOME/.nibid/config/genesis.json
+shasum -a 256 $HOME/.nibid/config/genesis.json
 
 # set seeds
 sed -i -e "s|seeds =.*|seeds = "'$(curl -s https://networks.itn.nibiru.fi/$NETWORK_NIBIRU/seeds)'"/" $HOME/.nibid/config/config.toml
