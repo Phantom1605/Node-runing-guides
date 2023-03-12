@@ -69,6 +69,7 @@ cd $HOME
 git clone https://github.com/NibiruChain/nibiru
 cd nibiru
 git checkout v0.19.2
+make install
 nibid version version
 cp $HOME/go/bin/nibid /usr/local/bin
 
