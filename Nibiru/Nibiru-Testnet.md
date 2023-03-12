@@ -195,7 +195,7 @@ sudo systemctl stop nibid
 ```
 sudo systemctl stop nibid
 sudo systemctl disable nibid
-rm /etc/systemd/system/defundd.service
+rm /etc/systemd/system/nibid.service
 rm -Rvf $HOME/nibiru
 rm -Rvf $HOME/.nibid
 ```
