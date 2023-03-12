@@ -31,7 +31,7 @@ if [ ! $NIBIRU_WALLET ]; then
 	read -p "Enter wallet name: " NIBIRU_WALLET
 	echo 'export NIBIRU_WALLET='$NIBIRU_WALLET >> $HOME/.bash_profile
 fi
-echo "export NOBIRU_CHAIN=nibiru-itn-1" >> $HOME/.bash_profile
+echo "export NIBIRU_CHAIN=nibiru-itn-1" >> $HOME/.bash_profile
 echo "export NIBIRU_PORT=${NIBIRU_PORT}" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
