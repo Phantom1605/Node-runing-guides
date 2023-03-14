@@ -125,7 +125,7 @@ sudo journalctl -u nibid -f -o cat
 ```
 ## Status of sinchronization:
 ```
-defundd status 2>&1 | jq .SyncInfo
+nibid status 2>&1 | jq .SyncInfo
 curl http://localhost:34657/status | jq .result.sync_info.catching_up
 ```
 ## Check Node ID:
