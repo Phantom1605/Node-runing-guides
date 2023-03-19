@@ -63,8 +63,8 @@ nibid tx distribution withdraw-rewards $(nibid keys show $NIBIRU_WALLET --bech v
 ## Delegate tokens to your validator:
 ```
 nibid tx staking delegate $(nibid keys show $NIBIRU_WALLET --bech val -a) <amontunibi> \
- --chain-id=$NIBIRU_CHAIN
- --from=$NIBIRU_WALLET
+ --chain-id=$NIBIRU_CHAIN \
+ --from=$NIBIRU_WALLET \
  --gas-prices 0.025unibi
 ```
 ## Unjail:
