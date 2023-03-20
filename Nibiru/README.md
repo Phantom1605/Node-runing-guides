@@ -47,8 +47,8 @@ nibid tx staking create-validator \
 ## Withdraw rewards:
 ```
 nibid tx distribution withdraw-all-rewards \
- --from $NIBIRU_WALLET
- --chain-id=$NIBIRU_CHAIN
+ --from $NIBIRU_WALLET \
+ --chain-id=$NIBIRU_CHAIN \
  --gas-prices 0.025unibi
 ```
 ## Withdraw validator commission:
