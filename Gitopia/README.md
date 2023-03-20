@@ -43,8 +43,8 @@ gitopiad tx staking create-validator \
 ## Withdraw rewards:
 ```
 gitopiad tx distribution withdraw-all-rewards \
---from $GITOPIA_WALLET
---chain-id=$GITOPIA_CHAIN
+--from $GITOPIA_WALLET \
+--chain-id=$GITOPIA_CHAIN \
 --gas=auto
 ```
 ## Withdraw validator commission:
@@ -58,8 +58,8 @@ gitopiad tx distribution withdraw-rewards $(gitopiad keys show $GITOPIA_WALLET -
 ## Delegate tokens to your validator:
 ```
 gitopiad tx staking delegate $(gitopiad keys show $GITOPIA_WALLET --bech val -a) <amontutlore> \
---chain-id=$GITOPIA_CHAIN
---from=$GITOPIA_WALLET
+--chain-id=$GITOPIA_CHAIN \
+--from=$GITOPIA_WALLET \
 --gas=auto
 ```
 ## Unjail:
