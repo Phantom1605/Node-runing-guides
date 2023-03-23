@@ -6,8 +6,7 @@ sudo apt install make clang pkg-config libssl-dev curl build-essential git jq nc
 ## Install Go:
 ```
 wget -O go1.19.2.linux-amd64.tar.gz https://golang.org/dl/go1.19.2.linux-amd64.tar.gz
-rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.2linux-amd64.tar.gz && rm go1.19.2linux-amd64.tar.gz
-
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.2.linux-amd64.tar.gz && rm go1.19.2.linux-amd64.tar.gz
 cat <<'EOF' >> $HOME/.bash_profile
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
