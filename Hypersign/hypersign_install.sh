@@ -53,7 +53,7 @@ sudo apt install curl build-essential git wget jq make gcc tmux mc htop chrony -
 
 # install go
 if ! [ -x "$(command -v go)" ]; then
-  ver="1.19.1"
+  ver="1.19.2"
   cd $HOME
   wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"
   sudo rm -rf /usr/local/go
@@ -68,7 +68,7 @@ echo -e "\e[1m\e[32m3. Downloading and building binaries... \e[0m" && sleep 1
 cd $HOME
 git clone https://github.com/hypersign-protocol/hid-node.git
 cd hid-node
-git checkout v0.1.5
+git checkout v0.1.7
 make install
 cp $HOME/go/bin/hid-noded /usr/local/bin
 
