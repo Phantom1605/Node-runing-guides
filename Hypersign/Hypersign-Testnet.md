@@ -24,9 +24,9 @@ go version
 cd $HOME
 git clone https://github.com/hypersign-protocol/hid-node.git
 cd $HOME/hid-node
+git checkout v0.1.7
 make install
 cp $HOME/go/bin/hid-noded /usr/local/bin
-hid-noded version
 ```
 ## Add variables:
 ```
