@@ -140,11 +140,19 @@ hid-noded tx staking delegate $(hid-noded keys show $HID_WALLET --bech val -a) <
  --chain-id=$HID_CHAIN \
  --from=$HID_WALLET
 ```
-## Collect rewards:
+## Withdraw rewards:
 ```
 hid-noded tx distribution withdraw-all-rewards \
  --chain-id=$HID_CHAIN \
  --from $HID_WALLET
+```
+## Withdraw rewards and validator commission:
+```
+hid-noded tx distribution withdraw-rewards $(hid-noded keys show $HID_WALLET --bech val -a) \
+--chain-id $HID_CHAIN \
+--from $HID_WALLET \
+--commission \
+--yes
 ```
 ## Unjail:
 ```
