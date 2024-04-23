@@ -34,6 +34,7 @@ dymd version --long
 echo 'export DYMENSION_MONIKER="Your Moniker name"'>> $HOME/.bash_profile
 echo 'export DYMENSION_WALLET="Your Wallet name"'>> $HOME/.bash_profile
 echo 'export DYMENSION_CHAIN="35-C"' >> $HOME/.bash_profile
+# for the mainnet use mainnet-1 chain
 . $HOME/.bash_profile
 
 #let's check
